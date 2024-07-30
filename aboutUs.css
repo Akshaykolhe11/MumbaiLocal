@@ -1,0 +1,86 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #f0f8ff; /* Light blue background color */
+}
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.text-content {
+    flex: 1;
+    padding: 20px;
+}
+.image-content {
+    flex: 1;
+    padding: 20px;
+}
+.image-content img {
+    max-width: 65%; 
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+.about-us .row,
+.our-vision .row {
+    margin-bottom: 20px; 
+}
+.our-vision .image-content {
+    margin-right: 20px; 
+}
+.our-vision .text-content {
+    margin-left: 20px; 
+}
+button {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+button:hover {
+    background-color: #0056b3;
+}
+.center {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.our-goals .row {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.goal {
+    flex: 1;
+    margin: 10px;
+    padding: 20px;
+    text-align: center;
+}
+
+.goal i {
+    font-size: 40px;
+    margin-bottom: 10px;
+    color: #ff5722; /* Adjust the color as needed */
+}
+
+.goal h3 {
+    margin-top: 10px;
+    font-size: 24px;
+}
+
+.goal p {
+    font-size: 16px;
+}

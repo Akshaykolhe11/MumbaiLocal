@@ -1,0 +1,167 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+.header {
+    background-color: #fff;
+    color: #000;
+    padding: 20px 10px;
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+.header h1 {
+    margin: 0;
+    font-size: 2.5em;
+    color: #333;
+    flex: 1;
+    text-align: center;
+}
+.header img.logo {
+    height: 60px;
+}
+.nav {
+    display: flex;
+    justify-content: center;
+    flex: 1;
+}
+.nav a {
+    color: #333;
+    text-decoration: none;
+    padding: 14px 20px;
+    margin: 0 10px;
+    transition: color 0.3s, background-color 0.3s;
+    border-radius: 5px;
+}
+.nav a:hover {
+    color: #fff;
+    background-color: #007bff;
+}
+.banner {
+    margin-top: 100px;
+    width: 100%;
+    overflow: hidden;
+}
+.banner img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+.boxes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 20px;
+    background-color: #f8f9fa;
+    gap: 20px;
+}
+.box {
+    flex: 1;
+    max-width: 280px;
+    padding: 20px;
+    text-align: center;
+    margin: 10px;
+    background: #f8fafc; /* Light color */
+    color: #333; /* Text color to contrast with background */
+    border-radius: 15px; /* Uniform shape */
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+.box:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 24px rgba(0,0,0,0.2);
+}
+.box img {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 15px;
+}
+.box h2 {
+    font-size: 1.4em;
+    margin: 10px 0;
+    color: #49821b; /* Heading color */
+}
+.box p {
+    font-size: 0.9em; /* Smaller font size for paragraphs in boxes */
+}
+
+/* New section styles */
+.info-section {
+    padding: 40px;
+    background-color: #f8fafc;
+    text-align: center;
+}
+.info-section.funding-section {
+    background-color: #e6f3ff; /* New background color for Funding section */
+}
+.info-content {
+    margin-bottom: 30px;
+    text-align: center; /* Default center alignment */
+}
+.info-content h2 {
+    font-size: 2em;
+    margin: 0 0 15px;
+    color: #49821b;
+}
+.info-content p {
+    font-size: 0.9em; /* Smaller font size for paragraphs */
+    color: #666;
+}
+.info-content h3 {
+    font-size: 1.5em;
+    margin-top: 20px;
+    color: #49821b;
+}
+.text-left {
+    text-align: left;
+}
+.text-left h3 i {
+    margin-right: 10px; /* Space between the icon and the text */
+    color: #49821b; /* Match the color of your headings */
+}
+.info-button {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 150px;
+    height: 60px;
+    background-color: #49821b;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 50px;
+    overflow: hidden;
+    font-size: 1em;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    transition: background-color 0.3s, transform 0.3s;
+}
+.info-button:hover {
+    background-color: #366815;
+    transform: scale(1.05);
+}
+.info-button::before {
+    content: '';
+    position: absolute;
+    left: -20px;
+    width: 120px;
+    height: 120px;
+    background: url('https://cdn-icons-png.flaticon.com/512/2182/2182625.png') no-repeat center center;
+    background-size: contain;
+    clip-path: inset(0 0 0 50%);
+    z-index: 0;
+    transition: clip-path 0.3s;
+}
+.info-button:hover::before {
+    clip-path: inset(0 0 0 0);
+}
+.info-button span {
+    position: relative;
+    z-index: 1;
+    font-size: 1em;
+    margin-left: 20px;
+}

@@ -21,19 +21,35 @@
         }
 
         .footer-column h3 {
-            margin: 0 0 5px 0; 
+            margin: 0 0 5px 0;
             padding: 0;
         }
 
         .footer-column .footer-text {
-            margin: 2px 0; 
+            margin: 2px 0;
             padding: 0;
         }
 
-        .footer-image {
+        .footer-column .footer-text p {
+            margin-top: -5px;
+        }
+
+        .find-us-image {
             margin-right: 10px;
-            width: 50px; /* Increased width */
-            height: 50px; /* Increased height */
+            width: 80px;
+            height: 90px;
+        }
+
+        .call-us-image {
+            margin-right: 10px;
+            width: 60px;
+            height: 60px;
+        }
+
+        .mail-us-image {
+            margin-right: 10px;
+            width: 45px;
+            height: 35px;
         }
 
         .additional-section {
@@ -44,17 +60,19 @@
             margin-left: -38px;
         }
 
-        .additional-section h3 {
+        .additional-section h5 {
             margin-left: -60px;
         }
 
-        .social-icons a {
+        .social-icons img {
+            width: 24px;
+            height: 24px;
             margin-right: 10px; 
         }
 
-        .social-icons img {
-            width: 24px; 
-            height: 24px; 
+        .social-icons img.instagram-icon {
+            width: 35px; 
+            height: 35px; 
         }
 
         .footer-image-support {
@@ -66,12 +84,106 @@
 
         .copyright {
             text-align: center;
-            margin: 0; 
-            padding: 0; 
+            margin: 0;
+            padding-top: 10px;
             font-size: 14px;
-            color: #333333; 
-            width: 100%; 
-            /* background-color: blue; */
+            color: #333333;
+            width: 100%;
+            background-color: gray;
+        }
+
+        @media screen and (max-width: 467px) {
+            .footer-column {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+
+            .footer-column img {
+                margin-bottom: 10px;
+            }
+
+            .find-us-image {
+                width: 80px;
+                height: 90px;
+            }
+
+            .call-us-image {
+                width: 80px;
+                height: 80px;
+            }
+
+            .mail-us-image {
+                width: 65px;
+                height: 55px;
+            }
+
+            .additional-section p {
+                margin-left: 0;
+                text-align: center;
+            }
+
+            .additional-section h5 {
+                margin-left: 0;
+                text-align: center;
+            }
+
+            .social-icons img {
+                margin-right: 5px;
+            }
+
+            .footer-image-support {
+                width: 100%;
+                margin-top: 0;
+                margin-right: 0;
+            }
+        }
+
+        @media screen and (max-width: 768px) {
+            .footer-column {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+
+            .footer-column img {
+                margin-bottom: 10px;
+            }
+
+            .find-us-image {
+                width: 80px;
+                height: 90px;
+            }
+
+            .call-us-image {
+                width: 80px;
+                height: 80px;
+            }
+
+            .mail-us-image {
+                width: 65px;
+                height: 55px;
+            }
+
+            .additional-section p {
+                margin-left: 0;
+                text-align: center;
+            }
+
+            .additional-section h5 {
+                margin-left: 0;
+                text-align: center;
+            }
+
+            .social-icons img {
+                margin-right: 5px;
+            }
+
+            .footer-image-support {
+                width: 100%;
+                margin-top: 0;
+                margin-right: 0;
+            }
         }
     </style>
 </head>
@@ -81,7 +193,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-4 footer-column">
-                    <img src="images/Find Us.png" alt="Find Us" class="footer-image">
+                    <img src="images/Find Us.png" alt="Find Us" class="find-us-image">
                     <div>
                         <h5>Find Us</h5>
                         <div class="footer-text">
@@ -90,7 +202,7 @@
                     </div>
                 </div>
                 <div class="col-md-4 footer-column">
-                    <img src="images/Contact Us.png" alt="Call Us" class="footer-image">
+                    <img src="images/Contact Us.png" alt="Call Us" class="call-us-image">
                     <div>
                         <h5>Call Us</h5>
                         <div class="footer-text">
@@ -99,7 +211,7 @@
                     </div>
                 </div>
                 <div class="col-md-4 footer-column">
-                    <img src="images/Mail Us.png" alt="Mail Us" class="footer-image">
+                    <img src="images/Mail Us.png" alt="Mail Us" class="mail-us-image">
                     <div>
                         <h5>Mail Us</h5>
                         <div class="footer-text">
@@ -109,38 +221,33 @@
                 </div>
             </div>
             <div class="row additional-section">
-                <div class="col-md-6">
+                <div class="col-md-6 mobile-view">
                     <p>Join the SHGeshop Competition with BMC's Mumbai Local and support Local Self-Help Groups (SHGs) as they showcase their best products. Submit creations, vote, and recognition, and discover unique, high-quality products. Empower local entrepreneurs today!</p>
                 </div>
             </div>
             <div class="row additional-section">
                 <div class="col-md-6">
-                    <h3>Follow Us</h3>
+                    <h5>Follow Us</h5>
                     <div class="social-icons">
-                       
-                            <img src="images/twitter.png" alt="Twitter">
-                        
-                        
-                            <img src="images/facebook.png" alt="Facebook">
-                        
-                            <img src="images/instagram-icon.png" alt="Instagram">
-                        
-                        <img src="images/linkedin-icon.png" alt="Linkdin">
+                        <img src="images/twitter.png" alt="Twitter">
+                        <img src="images/facebook.png" alt="Facebook">
+                        <img src="images/insta12.png" alt="Instagram" class="instagram-icon">
+                        <img src="images/link1.png" alt="LinkedIn">
                     </div>
                 </div>
                 <div class="col-md-6 d-flex justify-content-end align-items-center">
                     <img src="images/footer-image.png" alt="Supporting Local SHGs" class="footer-image-support">
                 </div>
             </div>
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="col-12 copyright">
-                        <p>Copyright &copy; 2024 Mumbai Local</p>
-                    </div>
-                </div>
-            </div>
         </div>
     </footer>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12 copyright">
+                <p>Copyright &copy; 2024 Mumbai Local</p>
+            </div>
+        </div>
+    </div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>

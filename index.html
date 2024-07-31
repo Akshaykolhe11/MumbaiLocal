@@ -12,47 +12,10 @@
             margin: 0;
             font-family: Arial, sans-serif;
         }
-        .header {
-            background-color: #fff;
-            color: #000;
-            padding: 20px 10px;
-            text-align: center;
-            position: fixed;
-            width: 100%;
-            top: 0;
-            z-index: 1000;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-        }
-        .header h1 {
-            margin: 0;
-            font-size: 2.5em;
-            color: #333;
-            flex: 1;
-            text-align: center;
-        }
-        .header img.logo {
-            height: 60px;
-        }
-        .nav {
-            display: flex;
-            justify-content: center;
-            flex: 1;
-        }
-        .nav a {
-            color: #333;
-            text-decoration: none;
-            padding: 14px 20px;
-            margin: 0 10px;
-            transition: color 0.3s, background-color 0.3s;
-            border-radius: 5px;
-        }
-        .nav a:hover {
-            color: #fff;
-            background-color: #972a41;
-        }
+
+
+        
+
         .banner {
             margin-top: 100px;
             width: 100%;
@@ -126,11 +89,33 @@
             font-size: 0.9em; 
             color: #666;
         }
-        .info-content h3 {
-            font-size: 1.5em;
+        .info-content h4 {
+            font-size: 18px;
             margin-top: 20px;
             color: #972a41;
         }
+        .info-content h3 {
+            
+            margin-top: 20px;
+            color: #972a41;
+        }
+        .info-content h5 {
+            font-size: 1.5em;
+            margin-top: 20px;
+            color: #972a41;
+            font-size: 20px;
+        }
+
+        
+
+        .image-info-content  {
+    width: 75%; 
+    height: auto; 
+    display: block; 
+    margin: 20px auto; 
+    
+}
+
         .text-left {
             text-align: left;
         }
@@ -314,72 +299,160 @@ form button:hover {
 
 
     
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-}
 
-header {
+
+/* Header Css */
+        
+
+nav{
+
+    padding: 10px 30px;
     display: flex;
+    align-items: center;
     justify-content: space-between;
-    align-items: center;
-    padding: 10px 20px;
-    background-color: #972a41;
-    color: white;
-}
-
-.logo_container .logo {
-    height: 50px;
-}
-
-.nav_bar {
-    display: flex;
-    min-width: 800px;
-    justify-content: space-evenly;
-    margin-right: 100px;
-    align-items: center;
-}
-
-.nav_bar a {
-    font-size: 14px;
-    letter-spacing: 0.3px;
-    color: white;
-    font-weight: 700;
-    text-transform: uppercase;
-    text-decoration: none;
-    padding: 28px 0;
-}
-
-.nav_link {
+    background: white;
     position: relative;
-    text-decoration: none;
-    padding: 10px 20px;
-    color: #972a41;
+    height: 70px;
+    margin-top: 30px;
+    /* border-top: 1px solid black;
+    border-bottom: 1px solid black; */
+}
+
+.logo{
+    display: flex;
     align-items: center;
 }
 
-.nav_bar a:hover {
-    border-bottom: 4px solid #972a41;
+.logo img{
+    
+    height: 50px; /* Adjust the height as needed */
+    width: auto;  /* Maintain the aspect ratio */
+    border-radius: 50px;
 }
-
 .divider {
     width: 1px;
-    height: 80px;
+    height: 50px;
     background-color: #ddd;
-    margin: 0 10px;
+    margin: 15px 15px;
 }
 
-.nav_bar a:before {
-    content: '';
-    height: 1px;
+nav ul{
+    display: flex;
+    gap: 70px;
+    align-items: center;
+    margin-right: 150px;
+}
+
+nav ul li{
+    list-style-type: none;
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: black;
+}
+nav ul li a:hover{
+    border-bottom: 4px solid black;
+    /* background-color:#340221;  */
+    /* Change background color on hover */
+    /* color:white; */
+    /* Change text color on hover */
+    /* border-radius: 5px;  */
+    /* Optional: Add border radius for rounded effect */
+}
+
+.menu-icon{
+    display: none;
+}
+
+.menu-icon i{
+    color: black;
+    font-size: 30px;
+}
+/* .image-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:space-evenly;
+} */
+/* .container{
+    display: flex;
+    justify-content: space-between;
+    width: 50%;
+    height: auto;
+
+}
+ */
+ .sMedia {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 20px;
+    background-color: #f8f9fa;
+    gap: 20px;
+    text-align: center;
+    
+}
+.media {
+    flex: 1 1 1;
+    max-width: 370px;
+    max-height: auto;
+    /* padding: 20px; */
+    text-align: center;
+    margin: 10px;
+    margin-top: 20px;
+    background: #f8fafc; 
+    color: #333; 
+    border-radius: 15px; 
+    transition: transform 0.3s, box-shadow 0.3s;
+    
+}
+.media:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 24px rgba(0,0,0,0.2);
+}
+.media iframe {
+    width: 20%;
+    height: 95%;
+    margin-bottom: 15px;
+    object-fit: cover;
+}
+#so1{
+    width: 90%;
+    height: 95%;
+    margin-bottom: 15px;
+    object-fit: cover;
+}
+/* .box1 {
+    flex: 1;
+    max-width: 280px;
+    padding: 20px;
+    text-align: center;
+    margin: 10px;
+    background: #f8fafc; 
+    color: #333; 
+    border-radius: 15px; 
+    transition: transform 0.3s, box-shadow 0.3s; */
+
+ .box:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 24px rgba(0,0,0,0.2); 
+}
+.box iframe {
     width: 100%;
-    background-color: #ddd;
-    position: absolute;
-    bottom: -5px;
-    left: 0;
+    height: 110%;
+    margin-bottom: 15px;
 }
+/* .box .instagram_media{
+    width: 50%;
+    height: 100%;
+    margin-bottom: 15px; */
 
+/* .box blockquote{
+    width: 50%;
+    height: 100%;
+    margin-bottom: 15px;
 
+} */
 
 .footer {
             background-color: #f0f0f0;
@@ -515,16 +588,93 @@ header {
         }
 
         
-.bussiness-selection{
-     padding: 70px; 
-            /* background-color: #f8fafc;  */
-            text-align: center;
-            
-            border: 1px solid #972a41;
-            margin: 0px;
-
-
+        .business-selection {
+    padding: 20px;
+    display: flex;
+    justify-content: center;
 }
+
+.info-content {
+    max-width: 1200px;
+    width: 100%;
+}
+
+.content-wrapper {
+    display: block;
+}
+
+.left-content {
+    margin-bottom: 20px;
+}
+
+.right-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.card {
+    background-color: #f8fafc; /* Or any color you prefer */
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    flex: 1 1 30%; /* Adjust the width of the cards */
+    box-sizing: border-box;
+    position: relative;
+}
+
+.card h3 {
+    margin-top: 0;
+}
+
+.card-description {
+    margin-top: 10px;
+}
+
+.sub-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.sub-card {
+    flex: 1 1 45%; /* Adjust the width of the sub-cards */
+    background-color: #e0e0e0; /* Sub-card color */
+    padding: 10px;
+    border-radius: 5px;
+    position: relative;
+    cursor: pointer;
+}
+
+.sub-card h4 {
+    margin-top: 0;
+    transition: color 0.3s;
+}
+
+.sub-card:hover h4 {
+    color: #007bff; /* Color on hover */
+}
+
+.sub-card-description {
+    display: none;
+    margin-top: 10px;
+}
+
+.sub-card:hover .sub-card-description {
+    display: block;
+}
+
+@media (max-width: 768px) {
+    .right-content {
+        flex-direction: column;
+    }
+    .sub-card {
+        flex: 1 1 100%; /* Full width on mobile */
+    }
+}
+
+
 .branding-section {
             padding: 70px;
             background-color: #f8fafc;
@@ -636,8 +786,343 @@ header {
 }
 
 
+.business-selection {
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+}
 
+.info-content {
+    max-width: 1200px;
+    width: 100%;
+}
 
+.content-wrapper {
+    display: block;
+}
+
+.left-content {
+    margin-bottom: 20px;
+}
+
+.right-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.card {
+    background-color: #f8fafc; /* Or any color you prefer */
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    flex: 1 1 30%; /* Adjust the width of the cards */
+    box-sizing: border-box;
+    position: relative;
+    margin-top: 15px;
+}
+
+.card h3 {
+    margin-top: 0;
+    color: #972A41; /* Color for h3 */
+}
+
+.card-description {
+    margin-top: 10px;
+}
+
+.sub-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.sub-card {
+    flex: 1 1 45%; /* Adjust the width of the sub-cards */
+    background-color: #e0e0e0; /* Sub-card color */
+    padding: 10px;
+    border-radius: 5px;
+    position: relative;
+    cursor: pointer;
+    overflow: hidden; /* Ensure content doesn't overflow */
+}
+
+.sub-card h5 {
+    margin-top: 0;
+    color: #972A41; /* Color for h4 */
+    transition: color 0.3s;
+    font-size: 18px;
+}
+
+.sub-card:hover h5 {
+    color: #972A41;/* Color on hover */
+}
+
+.sub-card-description {
+    display: none;
+    margin-top: 10px;
+}
+
+.sub-card:hover .sub-card-description {
+    display: block;
+    
+}
+
+@media (max-width: 768px) {
+    .right-content {
+        flex-direction: column;
+    }
+    .sub-card {
+        flex: 1 1 100%; /* Full width on mobile */
+    }
+}
+
+/* Image Gallery */
+section {
+  --childs: 10;
+  /* --gap: 10px; */
+  background: black;
+  /* border: 10px solid; */
+  width: 99vw;
+  display: flex;
+  /* gap: var(--gap); */
+}
+
+.box {
+  width: calc((100% / var(--childs)));
+  box-sizing: border-box;
+  height: min(50vmin, 250px);
+  background-color: white;
+  cursor: pointer;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  transition: width 300ms 50ms ease-in-out;
+}
+
+.box:hover {
+  width: calc((100% / (var(--childs) - 2)));
+}
+
+section:has(.box:hover) .box:not(:hover) {
+  width: calc((100% / (var(--childs) + 1)));
+}
+
+.box-1 {
+  background-image: url("https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/4xBy25QhsXKnSDTBvupM7k/46fc453dc3f9434167601fdfe1ed9a22/meta-image-general.jpg");
+}
+
+.box-2 {
+  background-image: url("https://c4.wallpaperflare.com/wallpaper/975/453/226/counter-strike-cs-go-wallpaper-preview.jpg");
+}
+
+.box-3 {
+  background-image: url("https://images.unsplash.com/photo-1630481331483-336ed0bac999?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MzV8fHhib3glMjBjb250cm9sbGVyfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=800&q=60");
+}
+
+.box-4 {
+  background-image: url("https://cdn.dribbble.com/users/2976379/screenshots/5751717/battlefield_v.jpg");
+}
+
+.box-5 {
+  background-image: url("https://a-static.besthdwallpaper.com/tom-clancy-s-ghost-recon-wildlands-wallpaper-2800x2100-2655_28.jpg");
+}
+
+/* Contact Us Form */
+.contact-us {
+    max-width: 100%;
+    margin: 20px auto;
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    text-align: center;
+    color: #972A41;
+    margin-bottom: 20px;
+    font-size: 2.5em;
+}
+.contact-card {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: white; /* Keep the introductory card white */
+    padding: 20px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+}
+.contact-content {
+    display: flex;
+    align-items: center;
+}
+.whatsapp-button {
+    background-color: #25D366;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 50px;
+    font-size: 20px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    transition: background-color 0.3s ease;
+    text-decoration: none;
+}
+.whatsapp-button i {
+    margin-right: 10px; /* Adjusted margin */
+    font-size: 24px;
+}
+.whatsapp-button:hover {
+    background-color: #1DA851;
+}
+.contact-section {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 100%;
+}
+.contact-section .contact-card {
+    flex: 1;
+    margin: 10px;
+    padding: 20px;
+    background-color: #F0F0F0; /* Light grey background for section cards */
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.contact-section .contact-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+.contact-section .contact-card h2 {
+    color: #333;
+    font-size: 15px;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+}
+.contact-section .contact-card h2 i {
+    margin-right: 10px;
+    color: #972A41;
+    font-size: 24px; /* Increased icon size */
+}
+.contact-section .contact-card p {
+    color: #2D2B2B;
+    font-size: 14px;
+    margin-bottom: 15px;
+    margin-left: 35px;
+}
+.contact-section .contact-card a {
+    color: #1A73E8;
+    text-decoration: none;
+}
+.contact-section .contact-card a:hover {
+    text-decoration: underline;
+}
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .container {
+        max-width: 90%;
+    }
+    h1 {
+        font-size: 2em;
+    }
+    .whatsapp-button {
+        font-size: 18px;
+        padding: 8px 16px;
+    }
+    .contact-section {
+        flex-direction: column;
+    }
+    .contact-section .contact-card {
+        margin: 10px 0;
+        padding: 15px;
+    }
+    .contact-section .contact-card h2 {
+        font-size: 14px;
+    }
+    .contact-section .contact-card p {
+        font-size: 13px;
+        margin-left: 0;
+    }
+    .contact-icon {
+        width: 40px; /* Adjusted size for smaller screens */
+        height: 40px;
+    }
+}
+@media (max-width: 480px) {
+    .container {
+        max-width: 100%;
+        padding: 10px;
+    }
+    h1 {
+        font-size: 1.5em;
+    }
+    .whatsapp-button {
+        font-size: 16px;
+        padding: 6px 12px;
+    }
+    .contact-section .contact-card {
+        padding: 10px;
+    }
+    .contact-section .contact-card h2 {
+        font-size: 12px;
+    }
+    .contact-section .contact-card p {
+        font-size: 12px;
+    }
+    .contact-icon {
+        width: 30px; /* Further adjusted size for small screens */
+        height: 30px;
+    }
+}
+.info-section .card {
+    background: #f8f8f8;
+    padding: 20px;
+    border-radius: 8px;
+    margin: 10px 0;
+}
+
+.info-section .card h3 {
+    color: #972A41;
+    font-size: 1.2em;
+}
+
+.info-section .card h4 {
+    color: #555;
+    font-size: 1em;
+    margin-top: 10px;
+}
+
+.info-section .card p {
+    color: #666;
+    margin-top: 10px;
+}
+
+.info-section .card ul {
+    list-style-type: disc;
+    padding-left: 20px;
+    margin-top: 10px;
+}
+
+.info-section .card ul li {
+    color: #666;
+}
+
+@media (max-width: 768px) {
+    .info-section .col-md-6 {
+        margin-bottom: 20px;
+    }
+}
 
 
     </style>
@@ -645,30 +1130,31 @@ header {
 <body>
 <!-- Header Section -->
 <header>
-    <div class="logo_container">
-        <a href="#"><img class="logo" src="images/Mumbai Local Logo.jpeg" alt="mumbai local logo"></a>
+        
+    <nav>
+        <div class="logo">
+            <div class="logo">
+                <a href=""><img src="images/BMC.png" alt="logo" class="logo-img"></a>
+            </div>
+            <span class="divider"></span>
+            <div class="logo">
+                <a href=""><img src="images/Mumbai Local Header.png" alt="logo" class="logo-img"></a>
+
+        </div>
     </div>
-    
-    <nav class="nav_bar">
-        <span class="divider"></span>
-        <a href="#" class="nav_link">Home</a>
-        <span class="divider"></span>
-        <a href="AboutUs.html" class="nav_link">ABOUT US</a>
-        <span class="divider"></span>
-        <a href="#" class="nav_link">CONTACT US</a>
-        <span class="divider"></span>
-        <a href="#" class="nav_link">BLOG</a>
-        <span class="divider"></span>
+        <ul id="menuList">
+            <li><a href="">HOME</a></li>
+            <li><a href="">ABOUT US</a></li>
+            <li><a href="">INITIATIVES</a></li>
+            <li><a href="">GALLERY</a></li>
+            <li><a href="">CONTACT US</a></li>
+        </ul>
+        <div class="menu-icon">
+            <i class="fa-solid fa-bars" onclick="toggleMenu()"></i>
+        </div>
     </nav>
+   
 </header>
-
-<!-- <script>
-    document.getElementById('menuToggle').addEventListener('click', function() {
-        const navBar = document.querySelector('.nav_bar');
-        navBar.classList.toggle('active');
-    });
-</script> -->
-
 <!-- Horizontal Line Below Navigation Bar -->
 <hr class="nav-hr">
 
@@ -680,12 +1166,12 @@ header {
 <!-- Boxes Section -->
 <div class="boxes">
     <div class="box">
-        <img src="images/Empowerment of SHGs.png" alt="Business Selection Icon">
+        <img src="images/Empowerment of SHGs Icon.png" alt="Business Selection Icon">
         <h2>Empowerment of SHGs</h2>
         <p>We will help you to select the right business.</p>
     </div>
     <div class="box">
-        <img src="images/Inclusivity for Transgenders.png" alt="Funding Icon">
+        <img src="images/Inclusivity for Transgender Icon.png" alt="Funding Icon">
         <h2>Inclusivity for Transgenders</h2>
         <p>We will provide funds for your business.</p>
     </div>
@@ -712,88 +1198,168 @@ header {
 
 
 <!-- Empowerment of SHGs Section -->
-<div class="bussiness-selection">
+<div class="business-selection">
     <div class="info-content">
         <h2>Empowerment of SHGs</h2>
-        <p>They also play a great role in empowering women because SHGs help women from economically weaker sections build social capital. Financial independence through self-employment opportunities also helps improve other development factors such as literacy levels, improved healthcare and better family planning.
-            <br><br>
-            The ultimate goal is to identify a business opportunity and create a business model that is financially viable and aligns with the individual's goals and values.</p>
+        <div class="content-wrapper">
+            <div class="left-content">
+                <p>They also play a great role in empowering women because SHGs help women from economically weaker sections build social capital. Financial independence through self-employment opportunities also helps improve other development factors such as literacy levels, improved healthcare, and better family planning.
+                    <br><br>
+                    The ultimate goal is to identify a business opportunity and create a business model that is financially viable and aligns with the individual's goals and values.
+                </p>
+            </div>
+            <div class="right-content">
+                <!-- Main Card with Sub-cards -->
+                <div class="card">
+                    <h3>Support for self-help groups.</h3>
+                    <p class="card-description">Self-help groups (SHGs) are pivotal in fostering community development and financial independence, especially among women in rural and semi-urban areas. At Mumbai Local, we provide comprehensive support to SHGs to help them thrive and achieve their entrepreneurial goals. Our support includes:</p>
+                    <div class="sub-cards">
+                        <div class="sub-card">
+                            <h5>Business Selection</h5>
+                            <p class="sub-card-description">We assist SHGs in identifying viable business opportunities that align with their skills and market demand. This helps them choose the right business path and ensures long-term sustainability.</p>
+                        </div>
+                        <div class="sub-card">
+                            <h5>Funding Assistance</h5>
+                            <p class="sub-card-description">Access to capital is crucial for any business. We connect SHGs with funding sources, including microfinance institutions, government schemes, and other financial institutions, to secure the necessary funds for their business operations.</p>
+                        </div>
+                        <div class="sub-card">
+                            <h5>Marketing Support</h5>
+                            <p class="sub-card-description">Effective marketing is essential for business success. We offer marketing services that include digital marketing strategies, social media promotions, and participation in local and online marketplaces to increase visibility and reach.</p>
+                        </div>
+                        <div class="sub-card">
+                            <h5>Branding Services</h5>
+                            <p class="sub-card-description">Building a strong brand is vital for differentiating products in the market. We help SHGs develop their brand identity through logo design, packaging, and promotional materials that resonate with their target audience.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <h3>Access to financial resources and training.</h3>
+                    <p>Access to financial resources and training is crucial for the success and growth of small businesses and self-help groups (SHGs). At Mumbai Local, we provide targeted support to empower entrepreneurs and SHG members with the financial and educational tools they need. Our services include:</p>
+                    
+                    <div class="sub-cards">
+                        <div class="sub-card">
+                            <h5>Financial Resource Access</h5>
+                            <p class="sub-card-description">We connect businesses and SHGs with various funding sources, including government grants, microfinance institutions, and private investors, to secure the capital necessary for starting or expanding their operations.</p>
+                        </div>
+                        <div class="sub-card">
+                            <h5>Training and Capacity Building</h5>
+                            <p class="sub-card-description">We offer training programs on essential business skills, including financial literacy, marketing strategies, operations management, and customer service, to enhance the overall capabilities of entrepreneurs and SHG members.</p>
+                        </div>
+                       
+                    </div>
+
+                </div>
+            </div>
+        </div>
     </div>
-   
 </div>
 
-<!-- Inclusivity for Transgenders Section -->
+
+
+<!-- Inclusivity for Transgenders -->
 <div class="info-section funding-section">
     <div class="container">
         <div class="row">
-            
             <div class="col-md-12">
                 <div class="info-content">
                     <h2>Inclusivity for Transgenders</h2>
-                    <p>India has young workers to drive growth in one of the world’s fastest-expanding economies. India is all set to become a ₹5 trillion economy by FY25. To achieve this target, every element of the country should also take part in business growth.</p>
+                    <p>Programs supporting transgender livelihoods are essential for creating equitable opportunities and improving economic outcomes for transgender individuals. At Mumbai Local, we are dedicated to offering comprehensive programs designed to empower transgender individuals and enhance their financial independence.</p>
                 </div>
             </div>
         </div>
         <div class="row mt-4">
-         
             <div class="col-md-6">
                 <div class="info-content">
-                    <h3>Why you need funding?</h2>
-                    <h3 class="text-left"><i class="fas fa-arrow-right"></i> To start a business</h3>
+                    <h3>Programs supporting transgender livelihoods.</h3>
+                    <h4 class="text-left"><i class="fas fa-arrow-right"></i> Employment Opportunities</h4>
                     <p class="text-left">Starting a business often requires a significant amount of upfront capital to cover expenses such as purchasing material, machines, and hiring employees.</p>
-                    <h3 class="text-left"><i class="fas fa-arrow-right"></i> To expand a business</h3>
+                    <h4 class="text-left"><i class="fas fa-arrow-right"></i> Financial Support and Resources</h4>
                     <p class="text-left">As a business grows, it may need additional funding to finance expansion efforts such as launching a new product, or increasing production.</p>
-                    <h3 class="text-left"><i class="fas fa-arrow-right"></i> To cover operating costs</h3>
+                    <h4 class="text-left"><i class="fas fa-arrow-right"></i> Mentorship and Networking</h4>
                     <p class="text-left">A business may need funding to cover its day-to-day operating costs, such as paying rent, utilities, and salaries.</p>
-                    <h3 class="text-left"><i class="fas fa-arrow-right"></i> To invest in new technologies or equipment</h3>
+                    <h4 class="text-left"><i class="fas fa-arrow-right"></i> Supportive Services</h4>
                     <p class="text-left">To purchase new technologies or equipment that will help it improve its operations and increase efficiency.</p>
                 </div>
             </div>
-           
             <div class="col-md-6">
                 <div class="info-content">
-                    <h3>NULM is our helping hand in generating funds for the business</h2>
-                    <p>At Mumbai Local, we are dedicated to empowering women entrepreneurs by providing comprehensive support across business selection, funding, marketing, and branding. One of the key pillars of our funding strategy is our collaboration with the National Urban Livelihoods Mission (NULM).</p>
+                    <h3>Social and economic integration</h3>
+                    <p>At Mumbai Local, we are dedicated to promoting the social and economic integration of marginalized groups, including transgender individuals, women, and self-help groups (SHGs). Our comprehensive approach aims to create an inclusive environment where everyone can thrive and contribute to their communities.</p>
+                    <img src="images/Social and economic integration.png" alt="Social and economic integration" class="image-info-content" />
                 </div>
             </div>
+            
+            
+            
         </div>
     </div>
 </div>
 
-
-
-<!-- Marketing Section -->
+<!-- Promotion of Artisanal Products Section -->
 <div class="info-section marketing-section">
     <div class="container">
         <div class="row">
-            
-            <div class="col-xl-8">
-                <div class="info-content" style="font-size: 0.9em; color: #666; line-height: 1.6em; text-align: left;">
+            <div class="col-xl-8 offset-xl-2">
+                <div class="info-content" style="font-size: 0.9em; color: #666; line-height: 1.6em; text-align: center;">
                     <h2>Promotion of Artisanal Products</h2>
-                    <ul style="list-style-type: disc; margin-left: 0; padding-left: 0;">
-                        <li style="margin-bottom: 10px;">We will help you to do marketing through an E-commerce site.</li>
-                        <li style="margin-bottom: 10px;">We will provide your platform to retail your products.</li>
-                        <li style="margin-bottom: 10px;">We will also provide business contacts where you can sell in bulk.</li>
-                        <li style="margin-bottom: 10px;">We have a number of vendors who will provide you with raw material at affordable rates.</li>
-                        <li style="margin-bottom: 10px;">We offer personalized business strategy consultations to help you grow and scale your business effectively.</li>
-                        <!-- <li style="margin-bottom: 10px;">Our digital literacy programs will equip you with the skills needed to navigate and succeed in the digital marketplace.</li>
-                        <li style="margin-bottom: 10px;">We provide market analysis reports to help you understand current trends and identify new opportunities for your business.</li>
-                        <li style="margin-bottom: 10px;">We organize regular workshops and training sessions on various aspects of running a successful business, from financial management to customer service.</li> -->
-
-                    </ul>
-                </div>
-            </div>
-            
-            
-            
-            <div class="col-lg-4">
-                <div class="info-content">
-                    <img src="images/marketing1.png" alt="Marketing Strategies" class="img-fluid mt-4">
+                    <p>At Mumbai Local, we are committed to empowering local artisans by providing them with the tools, resources, and platforms needed to reach broader markets and achieve sustainable success. Our programs for market access are designed to help artisans showcase their unique products, connect with customers, and grow their businesses. These initiatives include:</p>
                 </div>
             </div>
         </div>
+        
+        <div class="row">
+            <div class="col-md-6">
+                <div class="card">
+                    <h3>E-commerce Platform</h3>
+                    <h4>Online Marketplace</h4>
+                    <p>We offer a dedicated e-commerce platform where local artisans can list and sell their products, reaching customers beyond their immediate geographic area.</p>
+                    
+                </div>
+            </div>
+            <!-- <div class="col-md-6">
+                <div class="card">
+                    <h3>Column 2 Heading</h3>
+                    <h4>Subheading 2</h4>
+                    <p>Introduction to the second column's content.</p>
+                    <ul>
+                        <li>Point 1 for Column 2</li>
+                        <li>Point 2 for Column 2</li>
+                        <li>Point 3 for Column 2</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-6">
+                <div class="card">
+                    <h3>Column 3 Heading</h3>
+                    <h4>Subheading 3</h4>
+                    <p>Introduction to the third column's content.</p>
+                    <ul>
+                        <li>Point 1 for Column 3</li>
+                        <li>Point 2 for Column 3</li>
+                        <li>Point 3 for Column 3</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card">
+                    <h3>Column 4 Heading</h3>
+                    <h4>Subheading 4</h4>
+                    <p>Introduction to the fourth column's content.</p>
+                    <ul>
+                        <li>Point 1 for Column 4</li>
+                        <li>Point 2 for Column 4</li>
+                        <li>Point 3 for Column 4</li>
+                    </ul>
+                </div>
+            </div> -->
+        </div>
     </div>
 </div>
+
+
 
 <!-- Branding Section -->
 
@@ -835,7 +1401,18 @@ header {
         </div>
     </div>
 </div>
-
+<section>
+    <div class="box box-1"></div>
+    <div class="box box-2"></div>
+    <div class="box box-3"></div>
+    <div class="box box-4"></div>
+    <div class="box box-5"></div>
+    <div class="box box-1"></div>
+    <div class="box box-2"></div>
+    <div class="box box-3"></div>
+    <div class="box box-4"></div>
+    <div class="box box-5"></div>
+  </section>
 <!-- Social Media -->
 <div class="social_heading">
     <h1 class="social_one">Social Media</h1> 
@@ -847,47 +1424,30 @@ header {
     </div>
 
 <!-- Contact Us Form -->
-<main>
-    <section class="contact-section">
-        <h1>Contact Us</h1>
-        <p>If you have any questions, feel free to reach out to us. We'd love to hear from you!</p>
-        <div class="contact-content">
-            <form action="submit_form.php" method="post">
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" required>
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
-                <label for="message">Message:</label>
-                <textarea id="message" name="message" rows="5" required></textarea>
-                <button type="submit">Submit</button>
-            </form>
-            <div class="map">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3770.819732929426!2d72.82566351443522!3d19.076090687096446!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7ce4cd2109e7f%3A0xcdb03d3c73e40b56!2sBrihanmumbai%20Municipal%20Corporation!5e0!3m2!1sen!2sin!4v1595635233205!5m2!1sen!2sin" width="100%" height="320" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
-            </div>
-        </div>
-    </section>
-    <section class="contact-info">
-        <h2>Our Contact Information</h2>
-        <div class="contact-info-container">
-            <div class="contact-item">
-                <i class="fas fa-map-marker-alt"></i>
-                <p><strong>Address:</strong> <span class="info">BMC Office, Mumbai, Maharashtra</span></p>
-            </div>
-            <div class="contact-item">
-                <i class="fas fa-phone"></i>
-                <p><strong>Phone:</strong> <span class="info">+91-123-456-7890</span></p>
-            </div>
-            <div class="contact-item">
-                <i class="fas fa-envelope"></i>
-                <p><strong>Email:</strong> <span class="info">info@mumbailocal.com</span></p>
-            </div>
-            <div class="contact-item">
-                <i class="fas fa-globe"></i>
-                <p><strong>Website:</strong> <span class="info">www.mumbailocal.com</span></p>
-            </div>
-        </div>
-    </section>
-</main>
+<div class="contact-us">
+       <h1 class="main-heading">Contact Us</h1>
+       <div class="contact-card">
+           <p class="intro-text">Thank you for visiting our website Mumbai Local! We value your feedback and questions. Please click the button below to leave us a message. We're here to help and look forward to hearing from you.</p>
+           <div class="contact-content">
+               <a href="https://wa.me/9184597259" class="whatsapp-button" target="_blank"><i class="fab fa-whatsapp"></i> Send Message</a>
+           </div>
+       </div>
+       <div class="contact-section">
+           <div class="contact-card no-external-card">
+               <h2><i class="fas fa-phone"></i> Have a question or need assistance?</h2>
+               <p>Call Us: +91 84597259</p>
+           </div>
+           <div class="contact-card no-external-card">
+               <h2><i class="fas fa-envelope"></i> Need help or have inquiries?</h2>
+               <p>Email: <a href="mailto:support@mumbailocal.org">support@mumbailocal.org</a></p>
+           </div>
+           <div class="contact-card no-external-card">
+               <h2><i class="fas fa-map-marker-alt"></i> Office Address/Postal Address</h2>
+               <p>5, Mahapalika Marg, Dhobi Talao, Chhatrapati Shivaji Terminus Area, Fort Mumbai, Maharashtra 400001</p>
+           </div>
+       </div>
+   </div>
+
 <footer class="footer">
     <div class="container">
         <div class="row">

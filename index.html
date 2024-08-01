@@ -869,20 +869,99 @@ section {
             background-image: url("images/Mumbai Local-Banner(Logo-color).png");
         }
 
+
         .box-5 {
             background-image: url("images/Our Mission.png");
         }
+
+/* css of video gallery */
+.main-container {
+    max-width: 1500px; /* Adjusted max-width for better responsiveness */
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+}
+
+h1 {
+    font-size: 2.5em;
+    color: #a22842;
+    margin-bottom: 20px;
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background: #8e797d; /* Light background for the gallery section */
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.video-card {
+    /* flex: 1 1 calc(20% - 20px); */ /* Adjusts the width of each box */
+    margin: 10px;
+    background: #ffffff;
+    color: #333;
+    border-radius: 15px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    position: relative;
+   /*  padding-top: 56.25%;  *//* Maintain a 16:9 aspect ratio */
+    /* overflow: hidden; */
+    height: 400px;
+    width: 250px;
+    overflow: hidden;
+}
+
+.video-card iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+.video-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+    .video-card {
+        flex: 1 1 calc(25% - 20px); /* 4 boxes per row */
+    }
+}
+
+@media (max-width: 992px) {
+    .video-card {
+        flex: 1 1 calc(33.333% - 20px); /* 3 boxes per row */
+    }
+}
+
+@media (max-width: 768px) {
+    .video-card {
+        flex: 1 1 calc(50% - 20px); /* 2 boxes per row */
+    }
+}
+
+@media (max-width: 480px) {
+    .video-card {
+        flex: 1 1 100%; /* 1 box per row */
+    }
+}
+
+
+
 /* Contact Us Form */
 .contact-us {
-    max-width: 100%;
-    margin: 20px auto;
-    background-color: white;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 99%;
+    margin: 20px 20px;
+    padding: 0 20px;
+    border-radius: 10px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
 }
 
@@ -891,18 +970,23 @@ h1 {
     color: #972A41;
     margin-bottom: 20px;
     font-size: 2.5em;
+    margin-top: 30px;
 }
+
 .contact-card {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    background-color: white; /* Keep the introductory card white */
+    background: linear-gradient(135deg, #ffffff, #f9f9f9);
     padding: 20px;
-    border-radius: 5px;
+    border-radius: 15px;
     margin-bottom: 20px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
     width: 100%;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    
 }
+
 .main-heading{
     text-align: center;
     margin-top: 45px;
@@ -912,14 +996,19 @@ h1 {
     align-items: center;
     justify-content: center;
     margin-bottom: 20px;
+
+
+.contact-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+
 }
-.whatsapp-button {
-    background-color: #25D366;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 50px;
+
+.intro-card {
+    background: linear-gradient(135deg, #ffffff, #f9f9f9);
+    text-align: center;
     font-size: 20px;
+
     cursor: pointer;
     display: flex;
     align-items: center;
@@ -938,50 +1027,87 @@ h1 {
 .intro-text{
     text-align: center;
 }
+
+}
+
+
 .contact-section {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
     width: 100%;
 }
+
 .contact-section .contact-card {
     flex: 1;
     margin: 10px;
     padding: 20px;
-    background-color: #F0F0F0; /* Light grey background for section cards */
-    border-radius: 5px;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 15px;
+    background: linear-gradient(135deg, #f7f7f7, #e7e7e7);
+    text-align: left;
 }
-.contact-section .contact-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
-}
+
 .contact-section .contact-card h2 {
     color: #333;
-    font-size: 15px;
+    font-size: 1.2em;
     margin-bottom: 10px;
     display: flex;
     align-items: center;
+    font-weight: bold
 }
+
 .contact-section .contact-card h2 i {
     margin-right: 10px;
     color: #972A41;
-    font-size: 24px; /* Increased icon size */
+    font-size: 24px;
 }
+
 .contact-section .contact-card p {
-    color: #2D2B2B;
-    font-size: 14px;
+    color: #2d2b2b;
+    font-size: 17px;
     margin-bottom: 15px;
     margin-left: 35px;
 }
+
 .contact-section .contact-card a {
-    color: #1A73E8;
-    text-decoration: none;
+    color: #2d2b2b;
+    text-decoration: none; /* Ensures there is no underline */
 }
-.contact-section .contact-card a:hover {
+
+/* .contact-section .contact-card a:hover {
     text-decoration: underline;
+} */
+
+.whatsapp-button {
+    display: flex;
+    align-items: center;
+    background-color: #25D366;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 40px;
+    font-size: 16px;
+    cursor: pointer;
+    text-decoration: none; /* Ensures there is no underline */
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 10px;
+    margin-left: 30px;
 }
+
+.whatsapp-button .card-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    background-color: white;
+    color: #25D366;
+    border-radius: 50%;
+    margin-right: 8px;
+    font-size: 20px;
+}
+
 .info-section .card {
     background: #f8f8f8;
     padding: 20px;
@@ -1022,6 +1148,80 @@ h1 {
 @media (max-width: 768px) {
     .info-section .col-md-6 {
         margin-bottom: 20px;
+    }
+}
+
+
+
+.whatsapp-button span {
+    flex: 1;
+    font-weight: bold;
+    color: white; /* Ensures the text color inside the button is white */
+}
+
+.whatsapp-button:hover {
+    background-color: #1DA851;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .contact-us {
+        max-width: 90%;
+    }
+
+    h1 {
+        font-size: 2em;
+    }
+
+    .contact-section {
+        flex-direction: column;
+    }
+
+    .contact-section .contact-card {
+        margin: 10px 0;
+        padding: 15px;
+    }
+
+    .contact-section .contact-card h2 {
+        font-size: 14px;
+    }
+
+    .contact-section .contact-card p {
+        font-size: 13px;
+        margin-left: 0;
+    }
+
+    .contact-icon {
+        width: 40px;
+        height: 40px;
+    }
+}
+
+@media (max-width: 480px) {
+    .contact-us {
+        max-width: 100%;
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 1.5em;
+    }
+
+    .contact-section .contact-card {
+        padding: 10px;
+    }
+
+    .contact-section .contact-card h2 {
+        font-size: 12px;
+    }
+
+    .contact-section .contact-card p {
+        font-size: 12px;
+    }
+
+    .contact-icon {
+        width: 30px;
+        height: 30px;
     }
 }
 
@@ -1092,7 +1292,7 @@ h1 {
         <div class="logo">
             <div class="logo">
                 <a href=""><img src="images/BMC.png" alt="logo" class="logo-img"></a>
-            </div>
+            </div>  
             <span class="divider"></span>
             <div class="logo">
                 <a href=""><img src="images/Mumbai Local Header.png" alt="logo" class="logo-img"></a>
@@ -1353,6 +1553,29 @@ h1 {
     <div class="box box-4"></div>
     <div class="box box-5"></div>
   </section>
+
+
+  <!-- html code of video gallery -->
+  <div class="main-container">
+    <h1>Video Gallery</h1>
+    <div class="gallery">
+        <div class="video-card">
+            <iframe src="https://www.youtube.com/embed/_2IN_HjrNPE?si=0t1qojAFwXKrEBZa" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+        <div class="video-card">
+            <iframe src="https://www.youtube.com/embed/EHlXFISQo7E?si=YastkIcNObP1YGme" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+        <div class="video-card">
+            <iframe src="https://www.youtube.com/embed/cyWc5ntCIcU?si=kw9M-RS_q9wQOwOl" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+        <div class="video-card">
+            <iframe src="https://www.youtube.com/embed/s70nDUz31BY?si=A7kuzQnZF9rEO3s-" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+        <div class="video-card">
+            <iframe src="https://www.youtube.com/embed/KUgOYyoGhCU?si=GfnxjBdIbRwnTSxb" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+    </div>
+</div>
 <!-- Social Media -->
 <div class="social_heading">
     <h1 class="social_one">Social Media</h1> 
@@ -1364,6 +1587,7 @@ h1 {
     </div>
 
 <!-- Contact Us Form -->
+
 <!-- <div class="contact-us"> -->
        <h1 class="main-heading">Contact Us</h1>
        <!-- <div class="contact-card"> -->
@@ -1394,6 +1618,34 @@ h1 {
 
 
 <!-- Footer Section -->
+
+ <div class="contact-us">
+     <h1 class="main-heading">Contact Us</h1>
+        <div class="contact-card intro-card">
+            <p class="intro-text">Thank you for visiting our website Mumbai Local! We value your feedback and questions. Please click the button below to leave us a message. We're here to help and look forward to hearing from you.</p>
+        </div>
+        <div class="contact-section">
+            <div class="contact-card">
+                <h2><i class="fas fa-phone"></i> Have a question or need assistance?</h2>
+                <p>Call Us: +91 84597259</p>
+                <a href="https://wa.me/9184597259" class="whatsapp-button" target="_blank">
+                    <div class="card-icon">
+                        <i class="fab fa-whatsapp"></i>
+                    </div>
+                    <span>Send Message</span>
+                </a>
+            </div>
+            <div class="contact-card">
+                <h2><i class="fas fa-envelope"></i> Need help or have inquiries?</h2>
+                <p>Email: <a href="mailto:support@mumbailocal.org" style="color: #2d2b2b;">support@mumbailocal.org</a></p>
+            </div>
+            <div class="contact-card">
+                <h2><i class="fas fa-map-marker-alt"></i> Office Address/Postal Address</h2>
+                <p>5, Mahapalika Marg, Dhobi Talao, Chhatrapati Shivaji Terminus Area, Fort Mumbai, Maharashtra 400001</p>
+            </div>
+        </div>
+    </div>
+
 
 <footer class="footer ">
     <div class="container">

@@ -3,7 +3,7 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background-color: #f0f8ff; /* Light blue background color */
+    background-color: #ffffff; /* Light blue background color */
 }
 .container {
     width: 100%;
@@ -14,10 +14,17 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    color: #9c9999;
+    
 }
 .text-content {
     flex: 1;
-    padding: 20px;
+    padding: 20px;  
+}
+.text-content h1 {
+    font-size: 40px;
+    color: #972A41;
+    text-align: center;
 }
 .image-content {
     flex: 1;
@@ -54,33 +61,42 @@ button:hover {
 }
 .center {
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
+    color: #972A41;
+    font-size: 100px;
 }
-
 .our-goals .row {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+    
+    
 }
-
 .goal {
     flex: 1;
     margin: 10px;
     padding: 20px;
     text-align: center;
+    
 }
-
 .goal i {
     font-size: 40px;
     margin-bottom: 10px;
-    color: #ff5722; /* Adjust the color as needed */
+    color: #972A41; /* Adjust the color as needed */
 }
-
 .goal h3 {
     margin-top: 10px;
-    font-size: 24px;
+    font-size: 25px;
+    
 }
-
 .goal p {
     font-size: 16px;
+    color: #9c9999;
+    
 }
+/* {
+.flex-container
+    margin: 0;
+    padding: 0;
+    font-family:
+} */

@@ -947,7 +947,7 @@ h1 {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    background: #8e797d; /* Light background for the gallery section */
+    background: #ebe4e4; /* Light background for the gallery section */
     padding: 20px;
     border-radius: 20px;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
@@ -1009,36 +1009,53 @@ h1 {
 
 
 /* Contact Us Form */
-.contact-us {
-    max-width: 99%;
-    margin: 20px 20px;
-    padding: 0 20px;
-    border-radius: 10px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.new-container {
+    width: 97%;
+    padding: 0;
+}
+
+.contact-section {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    margin: 20px;
+}
+
+.contact-intro {
+    text-align: center;
 }
 
 h1 {
     text-align: center;
     color: #972A41;
     margin-bottom: 20px;
-    font-size: 2.5em;
-    margin-top: 30px;
+    font-size: 4.5em;
+  /*   padding: 20px; */
+}
+
+.contact-cards {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 20px;
 }
 
 .contact-card {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    background: linear-gradient(135deg, #ffffff, #f9f9f9);
+    flex: 1;
+    margin: 10px;
     padding: 20px;
     border-radius: 15px;
-    margin-bottom: 20px;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-    width: 100%;
+    background: linear-gradient(135deg, #f7f7f7, #e7e7e7);
+    text-align: left;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    margin-right: 20px;
+}
+
+.contact-card:first-child {
+    margin-left: 0;
 }
 
 .contact-card:hover {
@@ -1046,61 +1063,35 @@ h1 {
     box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
 }
 
-.intro-card {
-    background: linear-gradient(135deg, #ffffff, #f9f9f9);
-    text-align: center;
-    font-size: 20px;
-}
-
-.contact-section {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    width: 100%;
-}
-
-.contact-section .contact-card {
-    flex: 1;
-    margin: 10px;
-    padding: 20px;
-    border-radius: 15px;
-    background: linear-gradient(135deg, #f7f7f7, #e7e7e7);
-    text-align: left;
-}
-
-.contact-section .contact-card h2 {
+.contact-card h2 {
     color: #333;
     font-size: 1.2em;
     margin-bottom: 10px;
     display: flex;
     align-items: center;
-    font-weight: bold
+    font-weight: bold;
 }
 
-.contact-section .contact-card h2 i {
+.contact-card h2 i {
     margin-right: 10px;
     color: #972A41;
     font-size: 24px;
 }
 
-.contact-section .contact-card p {
+.contact-card p {
     color: #2d2b2b;
     font-size: 17px;
     margin-bottom: 15px;
     margin-left: 35px;
 }
 
-.contact-section .contact-card a {
+.contact-card a {
     color: #2d2b2b;
-    text-decoration: none; /* Ensures there is no underline */
+    text-decoration: none;
 }
 
-/* .contact-section .contact-card a:hover {
-    text-decoration: underline;
-} */
-
 .whatsapp-button {
-    display: flex;
+    display: inline-flex;
     align-items: center;
     background-color: #25D366;
     color: white;
@@ -1109,11 +1100,11 @@ h1 {
     border-radius: 40px;
     font-size: 16px;
     cursor: pointer;
-    text-decoration: none; /* Ensures there is no underline */
+    text-decoration: none;
     transition: background-color 0.3s ease, transform 0.3s ease;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     margin-top: 10px;
-    margin-left: 30px;
+    margin-left: 33px;
 }
 
 .whatsapp-button .card-icon {
@@ -1132,7 +1123,7 @@ h1 {
 .whatsapp-button span {
     flex: 1;
     font-weight: bold;
-    color: white; /* Ensures the text color inside the button is white */
+    color: white;
 }
 
 .whatsapp-button:hover {
@@ -1141,41 +1132,18 @@ h1 {
 
 /* Responsive Styles */
 @media (max-width: 768px) {
-    .contact-us {
-        max-width: 90%;
-    }
-
-    h1 {
-        font-size: 2em;
-    }
-
-    .contact-section {
+    .contact-cards {
         flex-direction: column;
     }
 
-    .contact-section .contact-card {
+    .contact-card {
         margin: 10px 0;
-        padding: 15px;
-    }
-
-    .contact-section .contact-card h2 {
-        font-size: 14px;
-    }
-
-    .contact-section .contact-card p {
-        font-size: 13px;
-        margin-left: 0;
-    }
-
-    .contact-icon {
-        width: 40px;
-        height: 40px;
+        width: 100%;
     }
 }
 
 @media (max-width: 480px) {
-    .contact-us {
-        max-width: 100%;
+    .new-container {
         padding: 10px;
     }
 
@@ -1183,23 +1151,30 @@ h1 {
         font-size: 1.5em;
     }
 
-    .contact-section .contact-card {
+    .contact-card {
         padding: 10px;
     }
 
-    .contact-section .contact-card h2 {
-        font-size: 12px;
+    .contact-card h2 {
+        font-size: 14px;
     }
 
-    .contact-section .contact-card p {
-        font-size: 12px;
+    .contact-card p {
+        font-size: 14px;
     }
 
-    .contact-icon {
-        width: 30px;
-        height: 30px;
+    .whatsapp-button {
+       /*  width: 50%; */
+        justify-content: center;
+    }
+
+    .whatsapp-button .card-icon {
+        margin-right: 0;
+        margin-left: 8px;
     }
 }
+/* css end of contact us */
+
 
     </style>
 </head>
@@ -1523,13 +1498,14 @@ h1 {
     </div>
 
 <!-- Contact Us Form -->
- <div class="contact-us">
-     <h1 class="main-heading">Contact Us</h1>
-        <div class="contact-card intro-card">
+<div class="new-container">
+    <div class="contact-section white-card">
+        <div class="contact-intro">
+            <h1 class="main-heading">Contact Us</h1>
             <p class="intro-text">Thank you for visiting our website Mumbai Local! We value your feedback and questions. Please click the button below to leave us a message. We're here to help and look forward to hearing from you.</p>
         </div>
-        <div class="contact-section">
-            <div class="contact-card">
+        <div class="contact-cards">
+            <div class="contact-card grey-card">
                 <h2><i class="fas fa-phone"></i> Have a question or need assistance?</h2>
                 <p>Call Us: +91 84597259</p>
                 <a href="https://wa.me/9184597259" class="whatsapp-button" target="_blank">
@@ -1539,17 +1515,18 @@ h1 {
                     <span>Send Message</span>
                 </a>
             </div>
-            <div class="contact-card">
+            <div class="contact-card grey-card">
                 <h2><i class="fas fa-envelope"></i> Need help or have inquiries?</h2>
                 <p>Email: <a href="mailto:support@mumbailocal.org" style="color: #2d2b2b;">support@mumbailocal.org</a></p>
             </div>
-            <div class="contact-card">
+            <div class="contact-card grey-card">
                 <h2><i class="fas fa-map-marker-alt"></i> Office Address/Postal Address</h2>
                 <p>5, Mahapalika Marg, Dhobi Talao, Chhatrapati Shivaji Terminus Area, Fort Mumbai, Maharashtra 400001</p>
             </div>
         </div>
     </div>
-
+</div>
+<!-- end of contact us form -->
 <footer class="footer">
     <div class="container">
         <div class="row">

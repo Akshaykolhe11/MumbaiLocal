@@ -26,83 +26,42 @@
             height: auto;
             display: block;
         }
-
-
-        /* 4 UPS's */
         .boxes {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    padding: 20px;
-    background-color: #f8f9fa;
-    gap: 20px;
-}
-
-.box {
-    flex: 1;
-    max-width: 280px;
-    padding: 20px;
-    text-align: center;
-    margin: 10px;
-    background: #f8fafc;
-    color: #333;
-    border-radius: 15px;
-    transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.box:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
-}
-
-.box img {
-    width: 60px;
-    height: 60px;
-    margin-bottom: 15px;
-}
-
-.box h2 {
-    font-size: 1.4em;
-    margin: 10px 0;
-    color: #972a41;
-}
-
-.box p {
-    font-size: 0.9em;
-}
-
-@media (max-width: 767px) {
-    .boxes {
-        justify-content: center;
-    }
-
-    .box {
-        flex: 0 0 calc(50% - 20px); /* Two boxes in a row with space */
-        margin: 10px;
-    }
-}
-
-@media (max-width: 480px) {
-    .box {
-        flex: 0 0 calc(100% - 10px); /* One box per row */
-        margin: 10px 0;
-    }
-
-    .box img {
-        width: 40px; /* Adjusted size for smaller screens */
-        height: 40px;
-    }
-
-    .box h2 {
-        margin-top: 0px;
-        font-size: 20px; /* Adjusted font size for smaller screens */
-    }
-
-    .box p {
-        font-size: 0.8em; /* Adjusted font size for smaller screens */
-    }
-}
-
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            padding: 20px;
+            background-color: #f8f9fa;
+            gap: 20px;
+        }
+        .box {
+            flex: 1;
+            max-width: 280px;
+            padding: 20px;
+            text-align: center;
+            margin: 10px;
+            background: #f8fafc; 
+            color: #333; 
+            border-radius: 15px; 
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .box:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 12px 24px rgba(0,0,0,0.2);
+        }
+        .box img {
+            width: 60px;
+            height: 60px;
+            margin-bottom: 15px;
+        }
+        .box h2 {
+            font-size: 1.4em;
+            margin: 10px 0;
+            color: #972a41; 
+        }
+        .box p {
+            font-size: 0.9em; 
+        }
 
         /* New section styles */
         .info-section {
@@ -214,51 +173,158 @@
 
 
 /* Header Css */
-   .nav-hr {
-    border: none;
-    border-top: 2px solid white; 
-    margin: 0;
-    padding: 0;
+        
+
+nav{
+
+    padding: 10px 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: white;
+    position: relative;
+    height: 70px;
+    margin-top: 30px;
+    /* border-top: 1px solid black;
+    border-bottom: 1px solid black; */
 }
 
-
-.banner {
-    margin-top: 0;
+.logo{
+    display: flex;
+    align-items: center;
 }
-     
-@media (max-width: 767.98px) {
-        .navbar-brand-wrapper {
-          display: flex;
-          align-items: center;
-          width: 100%; /* Make the wrapper take full width */
-        }
 
-        .navbar-toggler {
-          margin-left: auto; /* Pushes the toggle button to the right */
-          order: 1; /* Make sure toggle button comes last */
-        }
+.logo img{
+    
+    height: 50px; /* Adjust the height as needed */
+    width: auto;  /* Maintain the aspect ratio */
+    border-radius: 50px;
+}
+.divider {
+    width: 1px;
+    height: 50px;
+    background-color: #ddd;
+    margin: 15px 15px;
+}
 
-        .navbar-collapse {
-          margin-left: auto; /* Pushes the collapse container to the right */
-        }
-      }
+nav ul{
+    display: flex;
+    gap: 70px;
+    align-items: center;
+    margin-right: 150px;
+}
 
-      /* Ensure the header elements stay aligned */
-      .navbar {
-        display: flex;
-        justify-content: space-between;
-      }
+nav ul li{
+    list-style-type: none;
+}
 
-      .navbar-brand-wrapper {
-        display: flex;
-        align-items: center;
-      }
+nav ul li a{
+    text-decoration: none;
+    color: black;
+}
+nav ul li a:hover{
+    border-bottom: 4px solid black;
+    /* background-color:#340221;  */
+    /* Change background color on hover */
+    /* color:white; */
+    /* Change text color on hover */
+    /* border-radius: 5px;  */
+    /* Optional: Add border radius for rounded effect */
+}
 
-      .navbar-brand {
-        margin-right: 15px; /* Add space between logos */
-      }
+.menu-icon{
+    display: none;
+}
 
-/* footer Section */
+.menu-icon i{
+    color: black;
+    font-size: 30px;
+}
+/* .image-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:space-evenly;
+} */
+/* .container{
+    display: flex;
+    justify-content: space-between;
+    width: 50%;
+    height: auto;
+
+}
+ */
+ .sMedia {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 20px;
+    background-color: #f8f9fa;
+    gap: 20px;
+    text-align: center;
+    
+}
+.media {
+    flex: 1 1 1;
+    max-width: 370px;
+    max-height: auto;
+    /* padding: 20px; */
+    text-align: center;
+    margin: 10px;
+    margin-top: 20px;
+    background: #f8fafc; 
+    color: #333; 
+    border-radius: 15px; 
+    transition: transform 0.3s, box-shadow 0.3s;
+    
+}
+.media:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 24px rgba(0,0,0,0.2);
+}
+.media iframe {
+    width: 20%;
+    height: 95%;
+    margin-bottom: 15px;
+    object-fit: cover;
+}
+#so1{
+    width: 90%;
+    height: 95%;
+    margin-bottom: 15px;
+    object-fit: cover;
+}
+/* .box1 {
+    flex: 1;
+    max-width: 280px;
+    padding: 20px;
+    text-align: center;
+    margin: 10px;
+    background: #f8fafc; 
+    color: #333; 
+    border-radius: 15px; 
+    transition: transform 0.3s, box-shadow 0.3s; */
+
+ .box:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 24px rgba(0,0,0,0.2); 
+}
+.box iframe {
+    width: 100%;
+    height: 110%;
+    margin-bottom: 15px;
+}
+/* .box .instagram_media{
+    width: 50%;
+    height: 100%;
+    margin-bottom: 15px; */
+
+/* .box blockquote{
+    width: 50%;
+    height: 100%;
+    margin-bottom: 15px;
+
+} */
+
 .footer {
             background-color: #f0f0f0;
             padding: 20px;
@@ -392,34 +458,16 @@
             
         }
 
+        
         .business-selection {
-    position: relative; /* Ensure the pseudo-element is positioned relative to this container */
     padding: 20px;
     display: flex;
     justify-content: center;
-    background-image: url('images/image.jpg') !important; 
-    background-size: cover;
-    background-attachment: fixed;
-    transition: background 0.3s;
-    overflow: hidden; /* Prevent overflow of pseudo-element */
-}
-
-.business-selection::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.3); /* Black with 30% opacity for a more transparent effect */
-    z-index: 1; /* Place it below the content */
 }
 
 .info-content {
     max-width: 1200px;
     width: 100%;
-    position: relative; /* Ensure content is above the overlay */
-    z-index: 2; /* Above the pseudo-element */
 }
 
 .content-wrapper {
@@ -498,15 +546,13 @@
 }
 
 
-
-
-
-
-
-
-
-
-/* to/Task Sections */
+.branding-section {
+            padding: 70px;
+            background-color: #f8fafc;
+            text-align: center;
+            /* border: 1px solid #d66a20; */
+            margin: 0px;
+        }
 .tasks-container {
     text-align: center;
     padding: 20px;
@@ -593,6 +639,17 @@
 .center_button:hover {
     background-color: rgba(255, 255, 255, 1); /* Fully opaque on hover */
 }
+.nav-hr {
+    border: none;
+    border-top: 2px solid white; 
+    margin: 0;
+    padding: 0;
+}
+
+
+.banner {
+    margin-top: 0;
+}
 
 .marketing-section {
     margin-top: 45px;
@@ -618,10 +675,6 @@
 .left-content {
     margin-bottom: 20px;
 }
-.left-content p {
-    color: white;
-    font-size: 18px;
-}
 
 .right-content {
     display: flex;
@@ -632,8 +685,8 @@
 .card {
     background-color: #f8fafc; /* Or any color you prefer */
     padding: 20px;
-    border-radius: 15px;
-    box-shadow:rgb(0 0 0 / 61%);
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     flex: 1 1 30%; /* Adjust the width of the cards */
     box-sizing: border-box;
     position: relative;
@@ -698,6 +751,7 @@
 
 /* Image Gallery */
 section {
+
             --childs: 10;
             background: #EBE4E4;
             width: 99vw;
@@ -716,13 +770,32 @@ section {
             transition: width 300ms 50ms ease-in-out;
         }
 
-        .box:hover {
-            width: calc((100% / (var(--childs) - 2)) * 1.2); /* Adjusted hover state */
-        }
+  --childs: 10;
+  /* --gap: 10px; */
+  background: black;
+  /* border: 10px solid; */
+  width: 99vw;
+  display: flex;
+  /* gap: var(--gap); */
+}
 
-        section:has(.box:hover) .box:not(:hover) {
-            width: calc((100% / (var(--childs) + 1)) * 1.2); /* Adjusted non-hover state */
-        }
+
+.box {
+  width: calc((100% / var(--childs)));
+  box-sizing: border-box;
+  height: min(50vmin, 250px);
+  background-color: white;
+  cursor: pointer;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  transition: width 300ms 50ms ease-in-out;
+}
+
+.box:hover {
+  width: calc((100% / (var(--childs) - 2)));
+}
+
 
         .box-1 {
             background-image: url("images/Image1.jpg");
@@ -740,10 +813,35 @@ section {
             background-image: url("images/Image4.jpg");
         }
 
+section:has(.box:hover) .box:not(:hover) {
+  width: calc((100% / (var(--childs) + 1)));
+}
+
+.box-1 {
+  background-image: url("https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/4xBy25QhsXKnSDTBvupM7k/46fc453dc3f9434167601fdfe1ed9a22/meta-image-general.jpg");
+}
+
+.box-2 {
+  background-image: url("https://c4.wallpaperflare.com/wallpaper/975/453/226/counter-strike-cs-go-wallpaper-preview.jpg");
+}
+
+.box-3 {
+  background-image: url("https://images.unsplash.com/photo-1630481331483-336ed0bac999?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MzV8fHhib3glMjBjb250cm9sbGVyfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=800&q=60");
+}
+
+
+.box-4 {
+  background-image: url("https://cdn.dribbble.com/users/2976379/screenshots/5751717/battlefield_v.jpg");
+}
 
         .box-5 {
             background-image: url("images/Image5.jpg");
         }
+
+.box-5 {
+  background-image: url("https://a-static.besthdwallpaper.com/tom-clancy-s-ghost-recon-wildlands-wallpaper-2800x2100-2655_28.jpg");
+}
+
 
 /* css of video gallery */
 .main-container {
@@ -763,7 +861,11 @@ h1 {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+
     background: #EBE4E4; /* Light background for the gallery section */
+
+    background: #ebe4e4; /* Light background for the gallery section */
+
     padding: 20px;
     border-radius: 20px;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
@@ -824,16 +926,23 @@ h1 {
 }
 
 
-
 /* Contact Us Form */
-.contact-us {
-    max-width: 99%;
-    margin: 20px 20px;
-    padding: 0 20px;
-    border-radius: 10px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.new-container {
+    width: 97%;
+    padding: 0;
+}
+
+.contact-section {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    margin: 20px;
+}
+
+.contact-intro {
+    text-align: center;
 }
 
 h1 {
@@ -841,116 +950,66 @@ h1 {
     color: #972A41;
     margin-bottom: 20px;
     font-size: 2.5em;
-    margin-top: 30px;
+  /*   padding: 20px; */
 }
 
-.contact-card {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    background: linear-gradient(135deg, #ffffff, #f9f9f9);
-    padding: 20px;
-    border-radius: 15px;
-    margin-bottom: 20px;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-    width: 100%;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    
-}
-
-.main-heading{
-    text-align: center;
-    margin-top: 45px;
-}
-.contact-content {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 20px;
-
-
-.contact-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
-
-}
-
-.intro-card {
-    background: linear-gradient(135deg, #ffffff, #f9f9f9);
-    text-align: center;
-    font-size: 20px;
-
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    transition: background-color 0.3s ease;
-    text-decoration: none;
-   
-}
-.whatsapp-button i {
-    margin-right: 10px; /* Adjusted margin */
-    font-size: 24px;
-}
-.whatsapp-button:hover {
-    background-color: #1DA851;
-}
-
-.intro-text{
-    text-align: center;
-}
-
-}
-
-
-.contact-section {
+.contact-cards {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    width: 100%;
+    margin-top: 20px;
 }
 
-.contact-section .contact-card {
+.contact-card {
     flex: 1;
     margin: 10px;
     padding: 20px;
     border-radius: 15px;
     background: linear-gradient(135deg, #f7f7f7, #e7e7e7);
     text-align: left;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    margin-right: 20px;
 }
 
-.contact-section .contact-card h2 {
+.contact-card:first-child {
+    margin-left: 0;
+}
+
+.contact-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+.contact-card h2 {
     color: #333;
     font-size: 1.2em;
     margin-bottom: 10px;
     display: flex;
     align-items: center;
-    font-weight: bold
+    font-weight: bold;
 }
 
-.contact-section .contact-card h2 i {
+.contact-card h2 i {
     margin-right: 10px;
     color: #972A41;
     font-size: 24px;
 }
 
-.contact-section .contact-card p {
+.contact-card p {
     color: #2d2b2b;
     font-size: 17px;
     margin-bottom: 15px;
     margin-left: 35px;
 }
 
-.contact-section .contact-card a {
+.contact-card a {
     color: #2d2b2b;
-    text-decoration: none; /* Ensures there is no underline */
+    text-decoration: none;
 }
 
-/* .contact-section .contact-card a:hover {
-    text-decoration: underline;
-} */
-
 .whatsapp-button {
-    display: flex;
+    display: inline-flex;
     align-items: center;
     background-color: #25D366;
     color: white;
@@ -959,11 +1018,11 @@ h1 {
     border-radius: 40px;
     font-size: 16px;
     cursor: pointer;
-    text-decoration: none; /* Ensures there is no underline */
+    text-decoration: none;
     transition: background-color 0.3s ease, transform 0.3s ease;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     margin-top: 10px;
-    margin-left: 30px;
+    margin-left: 33px;
 }
 
 .whatsapp-button .card-icon {
@@ -979,55 +1038,10 @@ h1 {
     font-size: 20px;
 }
 
-.info-section .card {
-    background: #f8f8f8;
-    padding: 20px;
-    border-radius: 8px;
-    margin: 10px 0;
-    text-align: left;
-}
-
-.info-section .card h3 {
-    color: #972A41;
-    font-size: 1.2em;
-    text-align: center;
-}
-
-.info-section .card h4 {
-    color: #972A41;
-    font-size: 1em;
-    margin-top: 10px;
-    text-align: left;
-}
-
-.info-section .card p {
-    color: #666;
-    margin-top: 10px;
-    text-align: left;
-}
-
-.info-section .card ul {
-    list-style-type: disc;
-    padding-left: 20px;
-    margin-top: 10px;
-}
-
-.info-section .card ul li {
-    color: #666;
-}
-
-@media (max-width: 768px) {
-    .info-section .col-md-6 {
-        margin-bottom: 20px;
-    }
-}
-
-
-
 .whatsapp-button span {
     flex: 1;
     font-weight: bold;
-    color: white; /* Ensures the text color inside the button is white */
+    color: white;
 }
 
 .whatsapp-button:hover {
@@ -1036,41 +1050,18 @@ h1 {
 
 /* Responsive Styles */
 @media (max-width: 768px) {
-    .contact-us {
-        max-width: 90%;
-    }
-
-    h1 {
-        font-size: 2em;
-    }
-
-    .contact-section {
+    .contact-cards {
         flex-direction: column;
     }
 
-    .contact-section .contact-card {
+    .contact-card {
         margin: 10px 0;
-        padding: 15px;
-    }
-
-    .contact-section .contact-card h2 {
-        font-size: 14px;
-    }
-
-    .contact-section .contact-card p {
-        font-size: 13px;
-        margin-left: 0;
-    }
-
-    .contact-icon {
-        width: 40px;
-        height: 40px;
+        width: 100%;
     }
 }
 
 @media (max-width: 480px) {
-    .contact-us {
-        max-width: 100%;
+    .new-container {
         padding: 10px;
     }
 
@@ -1078,23 +1069,29 @@ h1 {
         font-size: 1.5em;
     }
 
-    .contact-section .contact-card {
+    .contact-card {
         padding: 10px;
     }
 
-    .contact-section .contact-card h2 {
-        font-size: 12px;
+    .contact-card h2 {
+        font-size: 14px;
     }
 
-    .contact-section .contact-card p {
-        font-size: 12px;
+    .contact-card p {
+        font-size: 14px;
     }
 
-    .contact-icon {
-        width: 30px;
-        height: 30px;
+    .whatsapp-button {
+       /*  width: 50%; */
+        justify-content: center;
+    }
+
+    .whatsapp-button .card-icon {
+        margin-right: 0;
+        margin-left: 8px;
     }
 }
+/* css end of contact us */
 
 /* Inclusivity For Transgenders Backgtoung Image */
 .info-section.funding-section {
@@ -1198,63 +1195,7 @@ h1 {
 </head>
 <body>
 <!-- Header Section -->
-
-
-
-
-
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <div class="navbar-brand-wrapper">
-      <a class="navbar-brand" href="#">
-        <img src="images/BMC.png" alt="" height="60px" />
-      </a>
-      <a class="navbar-brand" href="#">
-        <img src="images/Mumbai Local Header.png" alt="" height="60px" />
-      </a>
-      <button
-        class="navbar-toggler"
-        type="button"
-        data-toggle="collapse"
-        data-target="#navbarSupportedContent"
-        aria-controls="navbarSupportedContent"
-        aria-expanded="false"
-        aria-label="Toggle navigation"
-      >
-        <span class="navbar-toggler-icon"></span>
-      </button>
-    </div>
-
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav ml-auto">
-        <li class="nav-item active">
-          <a class="nav-link mx-3 nav-link-large" href="#">
-            Home <span class="sr-only">(current)</span>
-          </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link mx-3 nav-link-large" href="#">About Us</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link mx-3 nav-link-large" href="#">Contact Us</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link mx-3 nav-link-large" href="#">Initiatives</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link mx-3 nav-link-large" href="#">Competitions</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link mx-3 nav-link-large" href="#">Gallery</a>
-          </li>
-         
-      </ul>
-    </div>
-  </nav>
-<!-- <header>
-
-
-
-    
+<header>
         
     <nav>
         <div class="logo">
@@ -1269,7 +1210,7 @@ h1 {
     </div>
         <ul id="menuList">
             <li><a href="">HOME</a></li>
-            <li><a href="AboutUs.html">ABOUT US</a></li>
+            <li><a href="">ABOUT US</a></li>
             <li><a href="">INITIATIVES</a></li>
             <li><a href="">GALLERY</a></li>
             <li><a href="">CONTACT US</a></li>
@@ -1279,7 +1220,7 @@ h1 {
         </div>
     </nav>
    
-</header> -->
+</header>
 <!-- Horizontal Line Below Navigation Bar -->
 <hr class="nav-hr">
 
@@ -1302,7 +1243,11 @@ h1 {
     </div>
     <div class="box">
         <img src="images/Promotion of Artisanal Products.png" alt="Marketing Icon">
+
         <h2>Promotion Of Products</h2>
+
+        <h2>Promotion of Artisanal Products</h2>
+
         <p>Training helps to upgrade the business skills.</p>
     </div>
     
@@ -1324,12 +1269,18 @@ h1 {
 
 <!-- Empowerment of SHGs Section -->
 <div class="business-selection">
+
     <div class="info-content ">
         <h2 style="color: white; background-color: #972a41; ;">Empowerment of SHGs</h2>
+
+    <div class="info-content">
+        <h2>Empowerment of SHGs</h2>
+
         <div class="content-wrapper">
             <div class="left-content">
                 <p>They also play a great role in empowering women because SHGs help women from economically weaker sections build social capital. Financial independence through self-employment opportunities also helps improve other development factors such as literacy levels, improved healthcare, and better family planning.
-                   
+                    <br><br>
+                    The ultimate goal is to identify a business opportunity and create a business model that is financially viable and aligns with the individual's goals and values.
                 </p>
             </div>
             <div class="right-content">
@@ -1369,6 +1320,7 @@ h1 {
                             <h5>Training And Capacity Building</h5>
                             <p class="sub-card-description">We offer training programs on essential business skills, including financial literacy, marketing strategies, operations management, and customer service, to enhance the overall capabilities of entrepreneurs and SHG members.</p>
                         </div>
+
                         <div class="sub-card">
                             <h5>Networking And Collaboration</h5>
                             <p class="sub-card-description">We facilitate connections within a network of entrepreneurs, investors, and industry professionals, fostering collaboration and sharing of resources and knowledge.</p>
@@ -1377,12 +1329,17 @@ h1 {
                             <h5>Resource Centers</h5>
                             <p class="sub-card-description">We provide access to resource centers where individuals can find information on funding options, financial management tools, and training opportunities</p>
                         </div>
+
+                       
+
                     </div>
+
                 </div>
             </div>
         </div>
     </div>
 </div>
+
 <script>
     window.addEventListener('scroll', function() {
         const businessSelection = document.querySelector('.business-selection');
@@ -1393,6 +1350,10 @@ h1 {
         }
     });
 </script>
+
+
+
+
 
 <!-- Inclusivity for Transgenders -->
 <div class="info-section funding-section">
@@ -1438,8 +1399,12 @@ h1 {
     <div class="container">
         <div class="row">
             <div class="col-xl-8 offset-xl-2">
+
                 <div class="info-content">
-                    <h2>Promotion Of Products</h2>
+
+                <div class="info-content" style="font-size: 0.9em; color: #666; line-height: 1.6em; text-align: center;">
+                    <h2>Promotion of Artisanal Products</h2>
+
                     <p>At Mumbai Local, we are committed to empowering local artisans by providing them with the tools, resources, and platforms needed to reach broader markets and achieve sustainable success. Our programs for market access are designed to help artisans showcase their unique products, connect with customers, and grow their businesses. These initiatives include:</p>
                 </div>
             </div>
@@ -1451,37 +1416,71 @@ h1 {
                     <h3>E-commerce Platform</h3>
                     <h4>Online Marketplace</h4>
                     <p>We offer a dedicated e-commerce platform where local artisans can list and sell their products, reaching customers beyond their immediate geographic area.</p>
-                    <h4>Digital Marketing</h4>
-                    <p>Our digital marketing services help artisans promote their products online, utilizing social media, email marketing, and search engine optimization (SEO) to attract a wider audience.</p>
+                    
                 </div>
             </div>
-            <div class="col-md-6">
+            <!-- <div class="col-md-6">
                 <div class="card">
+
                     <h3>Product Development And Branding</h3>
                     <h4>Design and Innovation</h4>
                     <p>We offer workshops and consultations on product design and innovation, helping artisans refine their  run their businesses more efficiently offerings to meet market demands.</p>
                     <h4>Branding Services</h4>
                     <p>Our branding services include logo design, packaging, and promotional materials, helping artisans create a strong and recognizable brand identity.</p>
                   
+
+                    <h3>Column 2 Heading</h3>
+                    <h4>Subheading 2</h4>
+                    <p>Introduction to the second column's content.</p>
+                    <ul>
+                        <li>Point 1 for Column 2</li>
+                        <li>Point 2 for Column 2</li>
+                        <li>Point 3 for Column 2</li>
+                    </ul>
+
                 </div>
             </div>
         </div>
 
-   
+        <div class="row">
+            <div class="col-md-6">
+                <div class="card">
+                    <h3>Column 3 Heading</h3>
+                    <h4>Subheading 3</h4>
+                    <p>Introduction to the third column's content.</p>
+                    <ul>
+                        <li>Point 1 for Column 3</li>
+                        <li>Point 2 for Column 3</li>
+                        <li>Point 3 for Column 3</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card">
+                    <h3>Column 4 Heading</h3>
+                    <h4>Subheading 4</h4>
+                    <p>Introduction to the fourth column's content.</p>
+                    <ul>
+                        <li>Point 1 for Column 4</li>
+                        <li>Point 2 for Column 4</li>
+                        <li>Point 3 for Column 4</li>
+                    </ul>
+                </div>
+            </div> -->
         </div>
     </div>
 </div>
 
 
 
-<!-- Community Engagement -->
+<!-- Branding Section -->
 
 
 
 <div class="branding-section">
     <div class="info-content">
         <h2>Community Engagement</h2>
-        <p>At Mumbai Local, we believe in the power of community engagement to drive positive change and foster a sense of belonging among all members of society. Active participation in local initiatives is a cornerstone of our community engagement efforts. We encourage and support individuals, especially those from marginalized groups, to get involved in local activities that promote social cohesion, economic development, and cultural enrichment.</p>
+        <p>At Mumbai Local, we understand the importance of a strong and recognizable brand. Our expert team will help you create a distinct identity that resonates with your target audience. From designing logos to crafting compelling brand stories, we ensure your products stand out in the market. Let us help you build a brand that reflects your values and attracts loyal customers.</p>
         
     </div>
 </div>
@@ -1516,10 +1515,12 @@ h1 {
 </div>
 
 
+
 <!-- Image Gallery -->
 
 <div class="info-content ">
     <h2 >Image Gallery</h2>
+
 <section>
     <div class="box box-1"></div>
     <div class="box box-2"></div>
@@ -1582,21 +1583,15 @@ h1 {
   </div>          
  </main>
 
-
-
-
-
-
-
-<!-- Contact Us Section -->
-
- <div class="contact-us">
-     <h1 class="main-heading">Contact Us</h1>
-        <div class="contact-card intro-card">
+<!-- Contact Us Form -->
+<div class="new-container">
+    <div class="contact-section white-card">
+        <div class="contact-intro">
+            <h1 class="main-heading">Contact Us</h1>
             <p class="intro-text">Thank you for visiting our website Mumbai Local! We value your feedback and questions. Please click the button below to leave us a message. We're here to help and look forward to hearing from you.</p>
         </div>
-        <div class="contact-section">
-            <div class="contact-card">
+        <div class="contact-cards">
+            <div class="contact-card grey-card">
                 <h2><i class="fas fa-phone"></i> Have a question or need assistance?</h2>
                 <p>Call Us: +91 84597259</p>
                 <a href="https://wa.me/9184597259" class="whatsapp-button" target="_blank">
@@ -1606,11 +1601,11 @@ h1 {
                     <span>Send Message</span>
                 </a>
             </div>
-            <div class="contact-card">
+            <div class="contact-card grey-card">
                 <h2><i class="fas fa-envelope"></i> Need help or have inquiries?</h2>
                 <p>Email: <a href="mailto:support@mumbailocal.org" style="color: #2d2b2b;">support@mumbailocal.org</a></p>
             </div>
-            <div class="contact-card">
+            <div class="contact-card grey-card">
                 <h2><i class="fas fa-map-marker-alt"></i> Office Address/Postal Address</h2>
                 <p>5, Mahapalika Marg, Dhobi Talao, Chhatrapati Shivaji Terminus Area, Fort Mumbai, Maharashtra 400001</p>
             </div>
@@ -1620,7 +1615,13 @@ h1 {
 
 
 
+
 <footer class="footer ">
+
+</div>
+<!-- end of contact us form -->
+<footer class="footer">
+
     <div class="container">
         <div class="row">
             <div class="col-md-4 footer-column">
@@ -1680,21 +1681,6 @@ h1 {
         </div>
     </div>
 </div>
-<script
-src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-crossorigin="anonymous"
-></script>
-<script
-src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
-integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-crossorigin="anonymous"
-></script>
-<script
-src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
-integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-crossorigin="anonymous"
-></script>
 <script src="https://kit.fontawesome.com/a076d05399.js"></script>
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>

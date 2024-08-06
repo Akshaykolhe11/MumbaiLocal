@@ -178,3 +178,34 @@
         height: 30px;
     }
 }
+
+
+
+/* Promotion of Product */
+
+@media (min-width: 768px) {
+    .unique-col-md-6 {
+        flex: 0 0 45%;
+        max-width: 45%;
+    }
+}
+@media (max-width: 768px) {
+    .unique-icon-card {
+        width: 120px; 
+        height: 120px;
+    }
+    .unique-icon-card img {
+        width: 40px; 
+        height: 40px;
+    }
+}
+@media (max-width: 576px) {
+    .unique-icon-card {
+        width: 90px; 
+        height: 90px;
+    }
+    .unique-icon-card img {
+        width: 30px; 
+        height: 30px;
+    }
+}

@@ -1194,6 +1194,194 @@ h1 {
     }
 }
 
+
+
+
+
+.unique-info-section {
+            padding: 20px;
+            background-color: #fff;
+        }
+        .unique-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            position: relative; 
+        }
+        .unique-info-content {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .unique-info-content h2 {
+            font-size: 32px;
+            margin-bottom: 20px;
+            color: #972a41;
+        }
+        .unique-info-content p {
+            font-size: 18px;
+            color: #666;
+        }
+        .unique-row {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            position: relative; 
+            margin: -10px;
+        }
+        .unique-col-md-6 {
+            flex: 0 0 100%; 
+            max-width: 100%;
+            padding: 10px;
+            position: relative; 
+        }
+        .unique-card1, .unique-card2, .unique-card3, .unique-card4 {
+            background-color: #f9f9f9; 
+            border: 1px solid #ddd;
+            padding: 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            position: relative;
+            z-index: 1;
+        }
+        .unique-card1 {
+            border-top-left-radius: 45px;
+            border-top-right-radius: 45px;
+        }
+        .unique-card2 {
+            border-top-left-radius: 45px;
+            border-top-right-radius: 45px;
+        }
+        .unique-card3 {
+            border-bottom-left-radius: 45px;
+            border-bottom-right-radius: 45px;
+        }
+        .unique-card4 {
+            border-bottom-left-radius: 45px;
+            border-bottom-right-radius: 45px;
+        }
+        .unique-card1::after, .unique-card2::after, .unique-card3::after, .unique-card4::after {
+            content: '';
+            display: block;
+            width: 100%;
+            height: 4px;
+            position: absolute;
+            left: 0;
+        }
+        .unique-card1::after {
+            background-color: #865da1;
+            bottom: 0;
+            border-radius: 0 0 5px 5px; 
+        }
+        .unique-card2::after {
+            background-color: #ea9123;
+            bottom: 0;
+            border-radius: 0 0 5px 5px; 
+        }
+        .unique-card3::after {
+            background-color: #25b2e8;
+            top: 0; 
+            border-radius: 5px 5px 0 0; 
+        }
+        .unique-card4::after {
+            background-color: #e5481a;
+            top: 0; 
+            border-radius: 5px 5px 0 0; 
+        }
+        
+        .unique-card1 h3 {
+            color: #865da1;
+            text-align: center;
+        }
+        .unique-card2 h3 {
+            color: #ea9123;
+            text-align: center;
+        }
+        .unique-card3 h3 {
+            color: #25b2e8;
+            text-align: center;
+        }
+        .unique-card4 h3 {
+            color: #e5481a;
+            text-align: center;
+        }
+
+        .unique-card1 h4 {
+            color: #865da1;
+        }
+        .unique-card2 h4 {
+            color: #ea9123;
+        }
+        .unique-card3 h4 {
+            color: #25b2e8;
+        }
+        .unique-card4 h4 {
+            color: #e5481a;
+        }
+        
+        .unique-icon-card {
+            background-color: #f9f9f9; 
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            position: absolute; 
+            width: 118px; 
+            height: 90px; 
+            top: 50%; 
+            left: 50%; 
+            transform: translate(-50%, -50%);
+            z-index: 2; 
+            text-align: center; 
+        }
+        .unique-icon-card img {
+            position: absolute;
+            width: 54px; 
+            height: 42px; 
+        }
+        .unique-icon-card img:nth-child(1) { 
+            top: 3px;
+            left: 74%;
+            transform: translateX(-50%);
+        }
+        .unique-icon-card img:nth-child(2) { 
+            top: 73%;
+            right: 3px;
+            transform: translateY(-50%);
+        }
+        .unique-icon-card img:nth-child(3) { 
+            bottom: 0px;
+            left: 27%;
+            transform: translateX(-50%);
+        }
+        .unique-icon-card img:nth-child(4) { 
+            top: 28%;
+            left: 2px;
+            transform: translateY(-50%);
+        }
+       
+        @media (min-width: 768px) {
+            .unique-col-md-6 {
+                flex: 0 0 45%;
+                max-width: 45%;
+            }
+        }
+        @media (max-width: 768px) {
+            .unique-icon-card {
+                width: 120px; 
+                height: 120px;
+            }
+            .unique-icon-card img {
+                width: 40px; 
+                height: 40px;
+            }
+        }
+        @media (max-width: 576px) {
+            .unique-icon-card {
+                width: 90px; 
+                height: 90px;
+            }
+            .unique-icon-card img {
+                width: 30px; 
+                height: 30px;
+            }
+        }
     </style>
 </head>
 <body>
@@ -1434,40 +1622,42 @@ h1 {
 </div>
 
 <!-- Promotion of Artisanal Products Section -->
-<div class="info-section marketing-section">
-    <div class="container">
-        <div class="row">
-            <div class="col-xl-8 offset-xl-2">
-                <div class="info-content">
-                    <h2>Promotion Of Products</h2>
-                    <p>At Mumbai Local, we are committed to empowering local artisans by providing them with the tools, resources, and platforms needed to reach broader markets and achieve sustainable success. Our programs for market access are designed to help artisans showcase their unique products, connect with customers, and grow their businesses. These initiatives include:</p>
-                </div>
-            </div>
+<div class="unique-info-section">
+    <div class="unique-container">
+        <div class="unique-info-content">
+            <h2>Promotion Of Products</h2>
+            <p>At Mumbai Local, we are committed to empowering local artisans by providing them with the tools, resources, and platforms needed to reach broader markets and achieve sustainable success. Our programs for market access are designed to help artisans showcase their unique products, connect with customers, and grow their businesses. These initiatives include:</p>
         </div>
         
-        <div class="row">
-            <div class="col-md-6">
-                <div class="card">
-                    <h3>E-commerce Platform</h3>
-                    <h4>Online Marketplace</h4>
-                    <p>We offer a dedicated e-commerce platform where local artisans can list and sell their products, reaching customers beyond their immediate geographic area.</p>
+        <div class="unique-row">
+            <div class="unique-col-md-6">
+                <div class="unique-card1">
+                    <h3>Marketing</h3>
                     <h4>Digital Marketing</h4>
                     <p>Our digital marketing services help artisans promote their products online, utilizing social media, email marketing, and search engine optimization (SEO) to attract a wider audience.</p>
                 </div>
             </div>
-            <div class="col-md-6">
-                <div class="card">
-                    <h3>Product Development And Branding</h3>
+            <div class="unique-col-md-6">
+                <div class="unique-card2">
+                    <h3>Retail</h3>
                     <h4>Design and Innovation</h4>
-                    <p>We offer workshops and consultations on product design and innovation, helping artisans refine their  run their businesses more efficiently offerings to meet market demands.</p>
-                    <h4>Branding Services</h4>
-                    <p>Our branding services include logo design, packaging, and promotional materials, helping artisans create a strong and recognizable brand identity.</p>
-                  
+                    <p>We offer workshops and consultations on product design and innovation, helping artisans refine their offerings to meet market demands.</p>
                 </div>
             </div>
-        </div>
-
-   
+            <div class="unique-col-md-6">
+                <div class="unique-card3">
+                    <h3>Market Access Programs</h3>
+                    <h4>Local Markets</h4>
+                    <p>We organize local markets and fairs where artisans can directly sell their products and interact with customers, building a loyal customer base.</p>
+                </div>
+            </div>
+            <div class="unique-col-md-6">
+                <div class="unique-card4">
+                    <h3>Training and Support</h3>
+                    <h4>Workshops</h4>
+                    <p>We conduct workshops on various topics such as business management, marketing strategies, and financial literacy to help artisans run their businesses more efficiently.</p>
+                </div>
+            </div>
         </div>
     </div>
 </div>

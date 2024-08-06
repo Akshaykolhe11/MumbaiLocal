@@ -1,6 +1,8 @@
 /* aboutUs.css */
 
+
 /* body {
+
     font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
@@ -103,10 +105,12 @@ button:hover {
     margin-bottom: 10px;
     color: #972A41; /* Adjust the color as needed */
 /* } */
+
 .row>*{
     padding-left: 0% !important;
     padding-right: 0% !important;
 }
+
 .goal h3 {
     margin-top: 10px;
     font-size: 25px;
@@ -115,9 +119,11 @@ button:hover {
 .goal p {
     font-size: 16px;
     color: #9c9999;
+
         padding: 10px;
     text-align: justify;
 } 
+
 /* {
 .flex-container
     margin: 0;
@@ -125,12 +131,15 @@ button:hover {
     font-family:
 } */
 
+
+
 .our-goals .row {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+
     
-    
+
 }
 .goal {
     flex: 1;
@@ -138,7 +147,9 @@ button:hover {
     padding: 20px;
     text-align: center;
 
+
     /* background-color: #f0f0f0; */
+
     border: 1px solid #ddd;
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -151,6 +162,8 @@ button:hover {
     background-color: #fff; /* White background on hover */
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 
+
+
 }
 .goal i {
     font-size: 40px;
@@ -162,10 +175,14 @@ button:hover {
     font-size: 25px;
 
 
+
+
 }
 .goal p {
     font-size: 16px;
     color: #9c9999;
+
+
 
     transition: opacity 0.3s ease;
     max-height: 0;
@@ -179,8 +196,10 @@ button:hover {
 .center {
     text-align: center;
     margin-bottom: 20px;
+
     font-size: 70px;
     font-weight: 600;
+
 }
 .text-content p {
     text-align: justify;
@@ -198,5 +217,7 @@ button:hover {
         .our-goals .row{
             flex-direction: column;
         }
+
     }
+
 

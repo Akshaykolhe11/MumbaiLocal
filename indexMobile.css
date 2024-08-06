@@ -1,0 +1,180 @@
+@media only screen and (max-width:467px){
+    .collapse{
+        display: flex;
+        justify-content: start;
+    }
+    .firstLogo{
+     
+        padding-right: 10px;
+        height: 30px;
+    }
+    .secondLogo{
+        padding-right: 10px;
+        height: 30px;
+    }
+    .boxes{
+        display: inline-flex;
+        padding: 2px;
+        gap: 0px;
+
+    }
+    .box{
+        width: 33%;
+
+    }
+    .box h2 {
+        font-size: 15px;
+    }
+   .box img {
+        height: 50px;
+        width: 50px;
+    }
+    .empowerBlock{
+        display: grid;
+    }
+    .subempowerBlock{
+        width: 92%;
+    }
+    .footer-column {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer-column img {
+        margin-bottom: 10px;
+    }
+
+    .find-us-image {
+        width: 80px;
+        height: 90px;
+    }
+
+    .call-us-image {
+        width: 80px;
+        height: 80px;
+    }
+
+    .mail-us-image {
+        width: 65px;
+        height: 55px;
+    }
+
+    .additional-section p {
+        margin-left: 0;
+        text-align: center;
+    }
+
+    .additional-section h5 {
+        margin-left: 0;
+        text-align: center;
+    }
+
+    .social-icons img {
+        margin-right: 5px;
+    }
+
+    .footer-image-support {
+        width: 100%;
+        margin-top: 0;
+        margin-right: 0;
+    }
+    .onlinehub{
+        width: 98%;
+        height: 600px;
+    }
+    .twitter{
+        width: 98%;
+        height: 600px;
+        margin-top: 10px;
+    }
+    .facebook{
+        width: 98%;
+        height: 600px;
+    }
+    ._1p6f {
+        display: block;
+        width: 81%;
+    }
+}
+
+
+/* video gallery */
+@media (max-width: 1200px) {
+    .video-card {
+        flex: 1 1 calc(25% - 20px); /* 4 boxes per row */
+    }
+}
+@media (max-width: 992px) {
+    .video-card {
+        flex: 1 1 calc(33.333% - 20px); /* 3 boxes per row */
+    }
+}
+@media (max-width: 768px) {
+    .video-card {
+        flex: 1 1 calc(50% - 20px); /* 2 boxes per row */
+    }
+    .info-section .col-md-6 {
+        margin-bottom: 20px;
+    }
+}
+.whatsapp-button span {
+    flex: 1;
+    font-weight: bold;
+    color: white; /* Ensures the text color inside the button is white */
+}
+.whatsapp-button:hover {
+    background-color: #1DA851;
+}
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .contact-us {
+        max-width: 90%;
+    }
+    h1 {
+        font-size: 2em;
+    }
+    .contact-section {
+        flex-direction: column;
+    }
+    .contact-section .contact-card {
+        margin: 10px 0;
+        padding: 15px;
+    }
+    .contact-section .contact-card h2 {
+        font-size: 14px;
+    }
+    .contact-section .contact-card p {
+        font-size: 13px;
+        margin-left: 0;
+    }
+    .contact-icon {
+        width: 40px;
+        height: 40px;
+    }
+}
+@media (max-width: 480px) {
+    .video-card {
+        flex: 1 1 100%; /* 1 box per row */
+    }
+    .contact-us {
+        max-width: 100%;
+        padding: 10px;
+    }
+    h1 {
+        font-size: 1.5em;
+    }
+    .contact-section .contact-card {
+        padding: 10px;
+    }
+    .contact-section .contact-card h2 {
+        font-size: 12px;
+    }
+    .contact-section .contact-card p {
+        font-size: 12px;
+    }
+    .contact-icon {
+        width: 30px;
+        height: 30px;
+    }
+}

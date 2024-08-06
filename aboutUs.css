@@ -1,21 +1,39 @@
-body {
+/* aboutUs.css */
+
+/* body {
     font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background-color: #ffffff; /* Light blue background color */
-}
-.container {
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
+
+    background-color: #ffffff; 
+} */
+.container-fluid{
+    padding-left: 0% !important;
+    padding-right: 0% !important;
+
 }
 .row {
     display: flex;
+    --bs-gutter-x:0rem !important;
     align-items: center;
     justify-content: space-between;
     color: #9c9999;
     
+
+}
+.text-content p {
+    text-align: justify;
+    font-size: large;
+    font-weight: 500;
+    padding-left: 30px;
+}
+.text-content span{
+    text-align: justify;
+    font-size: large;
+    font-weight: 500;
+    padding-right: 30px;
+
 }
 .text-content {
     flex: 1;
@@ -65,6 +83,48 @@ button:hover {
     color: #972A41;
     font-size: 100px;
 }
+
+.our-goals .row {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    
+    
+}
+/* .goal {
+    flex: 1;
+    margin: 10px;
+    padding: 20px;
+    text-align: center;
+    
+}
+.goal i {
+    font-size: 40px;
+    margin-bottom: 10px;
+    color: #972A41; /* Adjust the color as needed */
+/* } */
+.row>*{
+    padding-left: 0% !important;
+    padding-right: 0% !important;
+}
+.goal h3 {
+    margin-top: 10px;
+    font-size: 25px;
+    
+}
+.goal p {
+    font-size: 16px;
+    color: #9c9999;
+        padding: 10px;
+    text-align: justify;
+} 
+/* {
+.flex-container
+    margin: 0;
+    padding: 0;
+    font-family:
+} */
+
 .our-goals .row {
     display: flex;
     justify-content: space-between;
@@ -77,7 +137,20 @@ button:hover {
     margin: 10px;
     padding: 20px;
     text-align: center;
-    
+
+    /* background-color: #f0f0f0; */
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+    position: relative; /* Required for pop-up positioning */
+    overflow: hidden; /* Hide the pop-up initially */
+}
+.goal:hover {
+    transform: scale(1.05);
+    background-color: #fff; /* White background on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+
 }
 .goal i {
     font-size: 40px;
@@ -87,16 +160,43 @@ button:hover {
 .goal h3 {
     margin-top: 10px;
     font-size: 25px;
-    
+
+
 }
 .goal p {
     font-size: 16px;
     color: #9c9999;
-    
+
+    transition: opacity 0.3s ease;
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
 }
-/* {
-.flex-container
-    margin: 0;
-    padding: 0;
-    font-family:
-} */
+.goal:hover p {
+    max-height: 300px; /* Max height for expansion */
+    opacity: 1;
+}
+.center {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 70px;
+    font-weight: 600;
+}
+.text-content p {
+    text-align: justify;
+}
+@media (max-width: 435px) {
+    .about-us .row{
+            flex-direction: column;
+        }
+    .our-Mission .row{
+            flex-direction: column;
+        }
+        .our-Vision .row{
+            flex-direction: column;
+        }
+        .our-goals .row{
+            flex-direction: column;
+        }
+    }
+

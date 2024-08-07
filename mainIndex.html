@@ -32,10 +32,10 @@
             <a class="nav-link active" aria-current="page" href="#">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Initiatives</a>
+           <!-- <a class="nav-link" href="#">Initiatives</a> -->
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#videogallery">Gallery</a>
+            <a class="nav-link" href="#gallery">Gallery</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="./AboutUs.html">About us</a>
@@ -52,14 +52,14 @@
   <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
     <div class="carousel-inner">
       <div class="carousel-item active">
-        <img src="images/mumbai-local-homepage-slider-1.jpg" class="d-block w-100" alt="homepage1">
+        <img src="images/homepageimage1.jpg" class="d-block w-100" alt="homepage1">
       </div>
       <div class="carousel-item">
-        <img src="images/mumbai-local-homepage-slider-2.jpg" class="d-block w-100" alt="homepage2">
+        <img src="images/homepage2.jpg" class="d-block w-100" alt="homepage2">
       </div>
-      <div class="carousel-item">
+     <!-- <div class="carousel-item">
         <img src="images/mumbai-local-homepage-slider-3.jpg" class="d-block w-100" alt="homepage3">
-      </div>
+      </div> -->
     </div>
     <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
       <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -76,23 +76,23 @@
     <div class="box">
         <img src="images/Empowerment of SHGs Icon.png" alt="Business Selection Icon">
         <h2>Empowerment of SHGs</h2>
-        <p>We will help you to select the right business.</p>
+        <p>We are committed to providing you with the tools and resources needed to achieve your goals.</p>
     </div>
     <div class="box">
         <img src="images/Inclusivity for Transgender Icon.png" alt="Funding Icon">
         <h2>Inclusivity for Transgenders</h2>
-        <p>We will provide funds for your business.</p>
+        <p>We are dedicated to creating an environment where everyone feels valued and respected.</p>
     </div>
     <div class="box">
         <img src="images/Promotion of Artisanal Products.png" alt="Marketing Icon">
         <h2>Promotion of Artisanal Products</h2>
-        <p>Training helps to upgrade the business skills.</p>
+        <p>We support showcasing your unique creations to a wider audience.</p>
     </div>
     
     <div class="box">
         <img src="images/Community Engagement.png" alt="Branding Icon">
         <h2>Community Engagement</h2>
-        <p>We brand your products to help them stand out in the market.</p>
+        <p>We collaborate with local communities to ensure your initiatives receive the recognition they deserve.</p>
     </div>
     
 </div>
@@ -341,10 +341,12 @@
   <h2 class="inclusivityText">Do / Task</h2>
   <div class="do-task-title mt-3 mb-3" >Explore a diverse range of online and offline skill-building exercises, challenges, and competitions</div>
   <div class="tasks-grid">
+    <a href="https://mumbailocal.org/" target="_blank" style="text-decoration: none;">
       <div class="task-item">
           <img src="images/Best Product Competition for BMC SHGs.png" alt="Best Product Competition for BMC SHGs">
           <p>Best Product Competition for BMC SHGs</p>
       </div>
+    </a>
       <div class="task-item">
           <img src="images/Women Entrepreneurs Summit.png" alt="Women Entrepreneurs Summit">
           <p>Women Entrepreneurs Summit</p>
@@ -364,9 +366,59 @@
   </div>
 </div>
 
+<!-- Image gallery -->
+<div class="image-galleryi" id="gallery">
+  <div class="gallery-containeri">
+      <h2 class="inclusivityText">Image Gallery</h2>
+      <div class="galleryi">
+          <div class="gallery-itemi">
+              <img src="./images/ImageGallery1.jpeg" alt="Image 1">
+          </div>
+          <div class="gallery-itemi">
+              <img src="./images/ImageGallery2.jpeg" alt="Image 2">
+          </div>
+          <div class="gallery-itemi">
+              <img src="./images/ImageGallery3.jpeg" alt="Image 3">
+          </div>
+          <div class="gallery-itemi">
+              <img src="./images/ImageGallery4.jpeg" alt="Image 4">
+          </div>
+          <div class="gallery-itemi">
+              <img src="./images/ImageGallery5.jpeg" alt="Image 5">
+          </div>
+          <div class="gallery-itemi">
+              <img src="./images/ImageGallery6.png" alt="Image 6">
+          </div>
+          <div class="gallery-itemi">
+              <img src="./images/ImageGallery7.jpeg" alt="Image 7">
+          </div>
+          <div class="gallery-itemi">
+              <img src="./images/ImageGallery10.jpeg" alt="Image 8">
+          </div>
+          <div class="gallery-itemi">
+              <img src="./images/ImageGallery11.jpeg" alt="Image 9">
+          </div>
+          <div class="gallery-itemi">
+              <img src="./images/ImageGallery8.jpeg" alt="Image 10">
+          </div>
+          <div class="gallery-itemi">
+              <img src="./images/ImageGallery9.jpeg" alt="Image 11">
+          </div>
+      </div>
+      <button class="prev" onclick="prevSlide()">&#10094;</button>
+      <button class="next" onclick="nextSlide()">&#10095;</button>
+  </div>
+  <div id="myModal" class="modal">
+      <span class="close">&times;</span>
+      <div class="modal-content">
+          <img id="modalImage" src="" alt="Modal Image">
+      </div>
+  </div>
+</div>
+
 <!-- video gallery -->
 <div class="main-container" id="videogallery">
-  <h1 class="inclusivityText mt-5 pt-3" >Video Gallery</h1>
+  <h1 class="inclusivityText mt-5 pt-3" >Impact Stories</h1>
   <div class="gallery">
       <div class="video-card">
           <iframe src="https://www.youtube.com/embed/_2IN_HjrNPE?si=0t1qojAFwXKrEBZa" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
@@ -448,7 +500,7 @@
           <div class="col-md-4 footer-column">
               <img src="https://kitintellect.tech/bmccompetition/MumbaiLocal-Findus.png_20240806073716" alt="Find Us Mumbai Local" class="find-us-image">
               <div>
-                  <h5>Find Us</h5>
+                  <h5 style="font-weight: 700 ;">Find Us</h5>
                   <div class="footer-text">
                       <p>5, Mahapalika Maag, Dhobi Talao, Chhatrapati Shivaji Terminus Area, Fort, Mumbai, Maharashtra 40001</p>
                   </div>
@@ -457,7 +509,7 @@
           <div class="col-md-4 footer-column">
               <img src="https://kitintellect.tech/bmccompetition/MumbaiLocal-Callus.png_20240806073626" alt="Call Us Mumbai Local" class="call-us-image">
               <div>
-                  <h5>Call Us</h5>
+                  <h5 style="font-weight: 700 ;">Call Us</h5>
                   <div class="footer-text">
                       <p>+91 8459172859</p>
                   </div>
@@ -466,7 +518,7 @@
           <div class="col-md-4 footer-column">
               <img src="https://kitintellect.tech/bmccompetition/MumbaiLocal-Mailus.png_20240806073838" alt="Mail Us Mumbai Local" class="mail-us-image">
               <div>
-                  <h5>Mail Us</h5>
+                  <h5 style="font-weight: 700 ;">Mail Us</h5>
                   <div class="footer-text">
                       <p>support@mumbailocal.org</p>
                   </div>
@@ -480,11 +532,11 @@
       </div>
       <div class="row additional-section">
           <div class="col-md-6">
-              <h5>Follow Us</h5>
+              <h5 style="font-weight: 700 ;">Follow Us</h5>
               <div class="social-icons">
                   <img src="images/twitter.png" alt="Twitter Mumbai Local">
-                  <img src="images/facebook.png" alt="Facebook Mumbai Local">
-                  <img src="images/insta12.png" alt="Instagram Mumbai Local" class="instagram-icon">
+                 <a href="https://www.facebook.com/people/Mumbai-Local/pfbid031eKEBTNfvxSdAZ2aR7jdbMAXfwFWMWmzZDQZ8kvPK5sUtX41NryL569s3pKXpEcPl/" target="_blank"> <img src="images/facebook.png" alt="Facebook Mumbai Local"></a>
+                 <a href="https://www.instagram.com/the.mumbai.local/" target="_blank" > <img src="images/insta12.png" alt="Instagram Mumbai Local" class="instagram-icon"></a>
                   <img src="images/link1.png" alt="LinkedIn Mumbai Local">
               </div>
           </div>
@@ -502,6 +554,77 @@
   </div>
 </div>
 
+<!-- Image gallery script-->
+
+<script>
+  const gallery = document.querySelector('.galleryi');
+  const items = document.querySelectorAll('.gallery-itemi');
+  let currentIndex = 0;
+  let visibleCount = 1;
+  const totalItems = items.length;
+
+  function updateVisibleCount() {
+      const screenWidth = window.innerWidth;
+      if (screenWidth >= 1200) {
+          visibleCount = 4;
+      } else if (screenWidth >= 900) {
+          visibleCount = 3;
+      } else if (screenWidth >= 600) {
+          visibleCount = 2;
+      } else {
+          visibleCount = 1;
+      }
+  }
+
+  function updateGallery() {
+      const offset = -currentIndex * (gallery.clientWidth / visibleCount);
+      gallery.style.transform = `translateX(${offset}px)`;
+  }
+
+  function nextSlide() {
+      if (currentIndex < totalItems - visibleCount) {
+          currentIndex++;
+      } else {
+          currentIndex = 0;
+      }
+      updateGallery();
+  }
+
+  function prevSlide() {
+      if (currentIndex > 0) {
+          currentIndex--;
+      } else {
+          currentIndex = totalItems - visibleCount;
+      }
+      updateGallery();
+  }
+
+  window.addEventListener('resize', () => {
+      updateVisibleCount();
+      updateGallery();
+  });
+
+  setInterval(nextSlide, 3000);
+
+  const modal = document.getElementById("myModal");
+  const modalImg = document.getElementById("modalImage");
+  const galleryItems = document.getElementsByClassName("gallery-itemi");
+
+  for (let i = 0; i < galleryItems.length; i++) {
+      galleryItems[i].onclick = function() {
+          modal.style.display = "flex";
+          modalImg.src = this.getElementsByTagName("img")[0].src;
+      }
+  }
+
+  const span = document.getElementsByClassName("close")[0];
+  span.onclick = function() {
+      modal.style.display = "none";
+  }
+
+  updateVisibleCount();
+  updateGallery();
+</script>
 
 <!-- bootstrap script -->
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>

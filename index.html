@@ -1,1893 +1,633 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mumbai Local</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-        }
-
-
-        
-
-        .banner {
-            margin-top: 100px;
-            width: 100%;
-            overflow: hidden;
-        }
-        .banner img {
-            width: 100%;
-            height: auto;
-            display: block;
-        }
-
-
-        /* 4 UPS's */
-        .boxes {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    padding: 20px;
-    background-color: #f8f9fa;
-    gap: 20px;
-}
-
-.box {
-    flex: 1;
-    max-width: 280px;
-    padding: 20px;
-    text-align: center;
-    margin: 10px;
-    background: #f8fafc;
-    color: #333;
-    border-radius: 15px;
-    transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.box:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
-}
-
-.box img {
-    width: 60px;
-    height: 60px;
-    margin-bottom: 15px;
-}
-
-.box h2 {
-    font-size: 1.4em;
-    margin: 10px 0;
-    color: #972a41;
-}
-
-.box p {
-    font-size: 0.9em;
-}
-
-@media (max-width: 767px) {
-    .boxes {
-        justify-content: center;
-    }
-
-    .box {
-        flex: 0 0 calc(50% - 20px); /* Two boxes in a row with space */
-        margin: 10px;
-    }
-}
-
-@media (max-width: 480px) {
-    .box {
-        flex: 0 0 calc(100% - 10px); /* One box per row */
-        margin: 10px 0;
-    }
-
-    .box img {
-        width: 40px; /* Adjusted size for smaller screens */
-        height: 40px;
-    }
-
-    .box h2 {
-        margin-top: 0px;
-        font-size: 20px; /* Adjusted font size for smaller screens */
-    }
-
-    .box p {
-        font-size: 0.8em; /* Adjusted font size for smaller screens */
-    }
-}
-
-
-        /* New section styles */
-        .info-section {
-            padding: 40px;
-            background-color: #f8fafc;
-            text-align: center;
-            box-shadow: lightgreen !important;
-            /* border: 1px solid lightgreen; */
-        }
-        .info-section.funding-section {
-            padding-top: 70px;
-            background-color: #f8fafc;
-        }
-        .info-content {
-            
-            margin-bottom: 30px;
-            text-align: center; 
-        }
-        .info-content h2 {
-            font-size: 2em;
-            margin: 0 0 15px;
-            color: #972a41;
-        }
-        .info-content p {
-            font-size: 0.9em; 
-            color: #666;
-        }
-        .info-content h4 {
-            font-size: 18px;
-            margin-top: 20px;
-            color: #972a41;
-        }
-        .info-content h3 {
-            
-            margin-top: 20px;
-            color: #972a41;
-        }
-        .info-content h5 {
-            font-size: 1.5em;
-            margin-top: 20px;
-            color: #972a41;
-            font-size: 20px;
-        }
-
-        
-
-        .image-info-content  {
-    width: 75%; 
-    height: auto; 
-    display: block; 
-    margin: 20px auto; 
-    
-}
-
-        .text-left {
-            text-align: left;
-        }
-        .text-left h3 i {
-            margin-right: 10px;
-            color: #972a41; 
-        }
-        .info-button {
-            position: relative;
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            width: 150px;
-            height: 60px;
-            background-color: #49821b;
-            color: #fff;
-            text-decoration: none;
-            border-radius: 50px;
-            overflow: hidden;
-            font-size: 1em;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-            transition: background-color 0.3s, transform 0.3s;
-        }
-        .info-button:hover {
-            background-color: #366815;
-            transform: scale(1.05);
-        }
-        .info-button::before {
-            content: '';
-            position: absolute;
-            left: -20px;
-            width: 120px;
-            height: 120px;
-            background: url('https://cdn-icons-png.flaticon.com/512/2182/2182625.png') no-repeat center center;
-            background-size: contain;
-            clip-path: inset(0 0 0 50%);
-            z-index: 0;
-            transition: clip-path 0.3s;
-        }
-        .info-button:hover::before {
-            clip-path: inset(0 0 0 0);
-        }
-        .info-button span {
-            position: relative;
-            z-index: 1;
-            font-size: 1em;
-            margin-left: 20px;
-        }
-
-
-
-
-
-    
-
-
-/* Header Css */
-   .nav-hr {
-    border: none;
-    border-top: 2px solid white; 
-    margin: 0;
-    padding: 0;
-}
-
-
-.banner {
-    margin-top: 0;
-}
-     
-@media (max-width: 767.98px) {
-        .navbar-brand-wrapper {
-          display: flex;
-          align-items: center;
-          width: 100%; /* Make the wrapper take full width */
-        }
-
-        .navbar-toggler {
-          margin-left: auto; /* Pushes the toggle button to the right */
-          order: 1; /* Make sure toggle button comes last */
-        }
-
-        .navbar-collapse {
-          margin-left: auto; /* Pushes the collapse container to the right */
-        }
-      }
-
-      /* Ensure the header elements stay aligned */
-      .navbar {
-        display: flex;
-        justify-content: space-between;
-      }
-
-      .navbar-brand-wrapper {
-        display: flex;
-        align-items: center;
-      }
-
-      .navbar-brand {
-        margin-right: 15px; /* Add space between logos */
-      }
-
-/* footer Section */
-.footer {
-            background-color: #f0f0f0;
-            padding: 20px;
-        }
-
-        .footer-column {
-            display: flex;
-            align-items: flex-start;
-            margin-bottom: 20px;
-        }
-
-        .footer-column h3 {
-            margin: 0 0 5px 0;
-            padding: 0;
-        }
-
-        .footer-column .footer-text {
-            margin: 2px 0;
-            padding: 0;
-        }
-
-        .footer-column .footer-text p {
-            margin-top: -5px;
-        }
-
-        .find-us-image {
-            margin-right: 10px;
-            width: 80px;
-            height: 90px;
-        }
-
-        .call-us-image {
-            margin-right: 10px;
-            width: 60px;
-            height: 60px;
-        }
-
-        .mail-us-image {
-            margin-right: 10px;
-            width: 45px;
-            height: 35px;
-        }
-
-        .additional-section {
-            text-align: left;
-        }
-
-        .additional-section p {
-            margin-left: -38px;
-        }
-
-        .additional-section h5 {
-            margin-left: -60px;
-        }
-
-        .social-icons img {
-            width: 24px;
-            height: 24px;
-            margin-right: 10px; 
-        }
-
-        .social-icons img.instagram-icon {
-            width: 35px; 
-            height: 35px; 
-        }
-
-        .footer-image-support {
-            width: 65%;
-            height: auto;
-            margin-right: 10%;
-            margin-top: -20%;
-        }
-
-        .copyright {
-            text-align: center;
-            margin: 0;
-            padding-top: 10px;
-            font-size: 14px;
-            color: #333333;
-            width: 100%;
-            background-color: gray;
-        }
-
-        @media screen and (max-width: 767px) {
-            .footer-column {
-                flex-direction: column;
-                align-items: center;
-                text-align: center;
-            }
-
-            .footer-column img {
-                margin-bottom: 10px;
-            }
-
-            .find-us-image {
-                width: 80px;
-                height: 90px;
-            }
-
-            .call-us-image {
-                width: 80px;
-                height: 80px;
-            }
-
-            .mail-us-image {
-                width: 65px;
-                height: 55px;
-            }
-
-            .additional-section p {
-                margin-left: 0;
-                text-align: center;
-            }
-
-            .additional-section h5 {
-                margin-left: 0;
-                text-align: center;
-            }
-
-            .social-icons img {
-                margin-right: 5px;
-            }
-
-            .footer-image-support {
-                width: 100%;
-                margin-top: 0;
-                margin-right: 0;
-            }
-
-
-            
-        }
-
-        .business-selection {
-    position: relative; /* Ensure the pseudo-element is positioned relative to this container */
-    padding: 20px;
-    display: flex;
-    justify-content: center;
-    background-image: url('images/image.jpg') !important; 
-    background-size: cover;
-    background-attachment: fixed;
-    transition: background 0.3s;
-    overflow: hidden; /* Prevent overflow of pseudo-element */
-}
-
-.business-selection::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.3); /* Black with 30% opacity for a more transparent effect */
-    z-index: 1; /* Place it below the content */
-}
-
-.info-content {
-    max-width: 1200px;
-    width: 100%;
-    position: relative; /* Ensure content is above the overlay */
-    z-index: 2; /* Above the pseudo-element */
-}
-
-.content-wrapper {
-    display: block;
-}
-
-.left-content {
-    margin-bottom: 20px;
-}
-
-.right-content {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-}
-
-.card {
-    background-color: #f8fafc; /* Or any color you prefer */
-    padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    flex: 1 1 30%; /* Adjust the width of the cards */
-    box-sizing: border-box;
-    position: relative;
-}
-
-.card h3 {
-    margin-top: 0;
-}
-
-.card-description {
-    margin-top: 10px;
-}
-
-.sub-cards {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    margin-top: 20px;
-}
-
-.sub-card {
-    flex: 1 1 45%; /* Adjust the width of the sub-cards */
-    background-color: #e0e0e0; /* Sub-card color */
-    padding: 10px;
-    border-radius: 5px;
-    position: relative;
-    cursor: pointer;
-}
-
-.sub-card h4 {
-    margin-top: 0;
-    transition: color 0.3s;
-}
-
-.sub-card:hover h4 {
-    color: #007bff; /* Color on hover */
-}
-
-.sub-card-description {
-    display: none;
-    margin-top: 10px;
-}
-
-.sub-card:hover .sub-card-description {
-    display: block;
-}
-
-@media (max-width: 768px) {
-    .right-content {
-        flex-direction: column;
-    }
-    .sub-card {
-        flex: 1 1 100%; /* Full width on mobile */
-    }
-}
-
-
-
-
-
-
-
-
-
-
-/* to/Task Sections */
-.tasks-container {
-    text-align: center;
-    padding: 20px;
-    max-width: 2000px;
-    margin-top: 50px;
-}
-.tasks-container h2 {
-    font-size: 32px;
-    margin-bottom: 10px;
-    color: #972a41;
-}
-.tasks-container p {
-    font-size: 18px;
-    color: #666;
-    margin-bottom: 20px;
-}
-.tasks-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 20px;
-    padding: 0 10px;
-}
-.task-item {
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-    text-align: center;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-.task-item:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
-}
-.task-item img {
-    width: 100%;
-    height: auto;
-    display: block;
-}
-.task-item p {
-    padding: 10px;
-    font-size: 16px;
-    color: #333;
-}
-
-.social_heading{
-    margin-top: 75px;
-    /* background-color: rgb(235, 248, 253); */
-}
-.social_one{
-    text-align: center;
-    color:#972a41;
-    /* margin-left: 150px; */
-    
-}
-.social_two{
-    text-align: center;
-    color:black;
-    /* margin-left: 150px; */
-} 
-.col-md-3 {
-    display: flex;
-    justify-content: space-between; 
-    margin-top: 20px;
-    margin-left: 80px;
-    margin-right: 80px;
-    /* background-color: rgb(235, 248, 253); */
-}
-
-.media_one {
-    margin: 0 30px; 
-}
-.media_one {
-    
-    max-width: 400px;
-    height: 400px; 
-    display: flex;
-    object-fit: cover;
-    /* margin-left: 30px;
-    margin-right:30px; */
-    
-}
-
-.center_button:hover {
-    background-color: rgba(255, 255, 255, 1); /* Fully opaque on hover */
-}
-
-.marketing-section {
-    margin-top: 45px;
-    background-color: #ffffff;
-}
-
-
-.business-selection {
-    padding: 20px;
-    display: flex;
-    justify-content: center;
-}
-
-.info-content {
-    max-width: 1200px;
-    width: 100%;
-}
-
-.content-wrapper {
-    display: block;
-}
-
-.left-content {
-    margin-bottom: 20px;
-}
-.left-content p {
-    color: white;
-    font-size: 18px;
-}
-
-.right-content {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-}
-
-.card {
-    background-color: #f8fafc; /* Or any color you prefer */
-    padding: 20px;
-    border-radius: 15px;
-    box-shadow:rgb(0 0 0 / 61%);
-    flex: 1 1 30%; /* Adjust the width of the cards */
-    box-sizing: border-box;
-    position: relative;
-    margin-top: 15px;
-}
-
-.card h3 {
-    margin-top: 0;
-    color: #972A41; /* Color for h3 */
-}
-
-.card-description {
-    margin-top: 10px;
-}
-
-.sub-cards {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    margin-top: 20px;
-}
-
-.sub-card {
-    flex: 1 1 45%; /* Adjust the width of the sub-cards */
-    background-color: #e0e0e0; /* Sub-card color */
-    padding: 10px;
-    border-radius: 5px;
-    position: relative;
-    cursor: pointer;
-    overflow: hidden; /* Ensure content doesn't overflow */
-}
-
-.sub-card h5 {
-    margin-top: 0;
-    color: #972A41; /* Color for h4 */
-    transition: color 0.3s;
-    font-size: 18px;
-}
-
-.sub-card:hover h5 {
-    color: #972A41;/* Color on hover */
-}
-
-.sub-card-description {
-    display: none;
-    margin-top: 10px;
-}
-
-.sub-card:hover .sub-card-description {
-    display: block;
-    
-}
-
-@media (max-width: 768px) {
-    .right-content {
-        flex-direction: column;
-    }
-    .sub-card {
-        flex: 1 1 100%; /* Full width on mobile */
-    }
-}
-
-/* Image Gallery */
-section {
-            --childs: 10;
-            background: #EBE4E4;
-            width: 99vw;
-            display: flex;
-        }
-
-        .box {
-            width: 100%; /* Increased width */
-            box-sizing: border-box;
-            height: min(50vmin, 250px);
-            background-color: white;
-            cursor: pointer;
-            background-size: cover;
-            background-repeat: no-repeat;
-            background-position: center center;
-            transition: width 300ms 50ms ease-in-out;
-        }
-
-        .box:hover {
-            width: calc((100% / (var(--childs) - 2)) * 1.2); /* Adjusted hover state */
-        }
-
-        section:has(.box:hover) .box:not(:hover) {
-            width: calc((100% / (var(--childs) + 1)) * 1.2); /* Adjusted non-hover state */
-        }
-
-        .box-1 {
-            background-image: url("images/Image1.jpg");
-        }
-
-        .box-2 {
-            background-image: url("images/Image2.jpg");
-        }
-
-        .box-3 {
-            background-image: url("images/Image3.jpg");
-        }
-
-        .box-4 {
-            background-image: url("images/Image4.jpg");
-        }
-
-
-        .box-5 {
-            background-image: url("images/Image5.jpg");
-        }
-
-/* css of video gallery */
-.main-container {
-    max-width: 1500px; /* Adjusted max-width for better responsiveness */
-    margin: 0 auto;
-    padding: 20px;
-    text-align: center;
-}
-
-h1 {
-    font-size: 2.5em;
-    color: #a22842;
-    margin-bottom: 20px;
-}
-
-.gallery {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    background: #EBE4E4; /* Light background for the gallery section */
-    padding: 20px;
-    border-radius: 20px;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-}
-
-.video-card {
-    /* flex: 1 1 calc(20% - 20px); */ /* Adjusts the width of each box */
-    margin: 10px;
-    background: #ffffff;
-    color: #333;
-    border-radius: 15px;
-    transition: transform 0.3s, box-shadow 0.3s;
-    position: relative;
-   /*  padding-top: 56.25%;  *//* Maintain a 16:9 aspect ratio */
-    /* overflow: hidden; */
-    height: 400px;
-    width: 250px;
-    overflow: hidden;
-}
-
-.video-card iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    border: none;
-}
-
-.video-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
-}
-
-/* Responsive adjustments */
-@media (max-width: 1200px) {
-    .video-card {
-        flex: 1 1 calc(25% - 20px); /* 4 boxes per row */
-    }
-}
-
-@media (max-width: 992px) {
-    .video-card {
-        flex: 1 1 calc(33.333% - 20px); /* 3 boxes per row */
-    }
-}
-
-@media (max-width: 768px) {
-    .video-card {
-        flex: 1 1 calc(50% - 20px); /* 2 boxes per row */
-    }
-}
-
-@media (max-width: 480px) {
-    .video-card {
-        flex: 1 1 100%; /* 1 box per row */
-    }
-}
-
-
-
-/* Contact Us Form */
-.contact-us {
-    max-width: 99%;
-    margin: 20px 20px;
-    padding: 0 20px;
-    border-radius: 10px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-h1 {
-    text-align: center;
-    color: #972A41;
-    margin-bottom: 20px;
-    font-size: 2.5em;
-    margin-top: 30px;
-}
-
-.contact-card {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    background: linear-gradient(135deg, #ffffff, #f9f9f9);
-    padding: 20px;
-    border-radius: 15px;
-    margin-bottom: 20px;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-    width: 100%;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    
-}
-
-.main-heading{
-    text-align: center;
-    margin-top: 45px;
-}
-.contact-content {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 20px;
-
-
-.contact-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
-
-}
-
-.intro-card {
-    background: linear-gradient(135deg, #ffffff, #f9f9f9);
-    text-align: center;
-    font-size: 20px;
-
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    transition: background-color 0.3s ease;
-    text-decoration: none;
-   
-}
-.whatsapp-button i {
-    margin-right: 10px; /* Adjusted margin */
-    font-size: 24px;
-}
-.whatsapp-button:hover {
-    background-color: #1DA851;
-}
-
-.intro-text{
-    text-align: center;
-}
-
-}
-
-
-.contact-section {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    width: 100%;
-}
-
-.contact-section .contact-card {
-    flex: 1;
-    margin: 10px;
-    padding: 20px;
-    border-radius: 15px;
-    background: linear-gradient(135deg, #f7f7f7, #e7e7e7);
-    text-align: left;
-}
-
-.contact-section .contact-card h2 {
-    color: #333;
-    font-size: 1.2em;
-    margin-bottom: 10px;
-    display: flex;
-    align-items: center;
-    font-weight: bold
-}
-
-.contact-section .contact-card h2 i {
-    margin-right: 10px;
-    color: #972A41;
-    font-size: 24px;
-}
-
-.contact-section .contact-card p {
-    color: #2d2b2b;
-    font-size: 17px;
-    margin-bottom: 15px;
-    margin-left: 35px;
-}
-
-.contact-section .contact-card a {
-    color: #2d2b2b;
-    text-decoration: none; /* Ensures there is no underline */
-}
-
-/* .contact-section .contact-card a:hover {
-    text-decoration: underline;
-} */
-
-.whatsapp-button {
-    display: flex;
-    align-items: center;
-    background-color: #25D366;
-    color: white;
-    border: none;
-    padding: 8px 16px;
-    border-radius: 40px;
-    font-size: 16px;
-    cursor: pointer;
-    text-decoration: none; /* Ensures there is no underline */
-    transition: background-color 0.3s ease, transform 0.3s ease;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    margin-top: 10px;
-    margin-left: 30px;
-}
-
-.whatsapp-button .card-icon {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 32px;
-    height: 32px;
-    background-color: white;
-    color: #25D366;
-    border-radius: 50%;
-    margin-right: 8px;
-    font-size: 20px;
-}
-
-.info-section .card {
-    background: #f8f8f8;
-    padding: 20px;
-    border-radius: 8px;
-    margin: 10px 0;
-    text-align: left;
-}
-
-.info-section .card h3 {
-    color: #972A41;
-    font-size: 1.2em;
-    text-align: center;
-}
-
-.info-section .card h4 {
-    color: #972A41;
-    font-size: 1em;
-    margin-top: 10px;
-    text-align: left;
-}
-
-.info-section .card p {
-    color: #666;
-    margin-top: 10px;
-    text-align: left;
-}
-
-.info-section .card ul {
-    list-style-type: disc;
-    padding-left: 20px;
-    margin-top: 10px;
-}
-
-.info-section .card ul li {
-    color: #666;
-}
-
-@media (max-width: 768px) {
-    .info-section .col-md-6 {
-        margin-bottom: 20px;
-    }
-}
-
-
-
-.whatsapp-button span {
-    flex: 1;
-    font-weight: bold;
-    color: white; /* Ensures the text color inside the button is white */
-}
-
-.whatsapp-button:hover {
-    background-color: #1DA851;
-}
-
-/* Responsive Styles */
-@media (max-width: 768px) {
-    .contact-us {
-        max-width: 90%;
-    }
-
-    h1 {
-        font-size: 2em;
-    }
-
-    .contact-section {
-        flex-direction: column;
-    }
-
-    .contact-section .contact-card {
-        margin: 10px 0;
-        padding: 15px;
-    }
-
-    .contact-section .contact-card h2 {
-        font-size: 14px;
-    }
-
-    .contact-section .contact-card p {
-        font-size: 13px;
-        margin-left: 0;
-    }
-
-    .contact-icon {
-        width: 40px;
-        height: 40px;
-    }
-}
-
-@media (max-width: 480px) {
-    .contact-us {
-        max-width: 100%;
-        padding: 10px;
-    }
-
-    h1 {
-        font-size: 1.5em;
-    }
-
-    .contact-section .contact-card {
-        padding: 10px;
-    }
-
-    .contact-section .contact-card h2 {
-        font-size: 12px;
-    }
-
-    .contact-section .contact-card p {
-        font-size: 12px;
-    }
-
-    .contact-icon {
-        width: 30px;
-        height: 30px;
-    }
-}
-
-/* Inclusivity For Transgenders Backgtoung Image */
-.info-section.funding-section {
-    background-image: url('images/Inclusivity For Transgenders Image.png');
-    background-size: cover; 
-    background-position: center; 
-    background-repeat: no-repeat;
-    padding: 20px; 
-    color: #fff; 
-}
-
-
-/* Social Media Section */
-.onlinehub{
-            margin-top: 20px;
-            width: 350px !important;
-            height: 450px !important;
-            margin-left:30px !important;
-            overflow-x: hidden;
-            
-        }
-        .facebook{
-            margin-top: 20px;
-            width: 390px;
-            height:450px;
-            margin-right: 20px;
-            overflow-x: hidden;
-            padding-left: 0;
-            
-
-            
-        }
-        
-        
-        .twitter{
-            padding: 20px;
-            width:300px;
-            height: 450px;
-            margin-right: 20px;
-            overflow-x: hidden;
-            background-color: #ddd;
-           background: none;
-        }
-
-
-    
-    
-    .pnetworks {
-        display: flex;
-        justify-content: space-evenly;
-        flex-wrap: wrap;
-        margin-top: 40px;
-        background-color: rgb(235, 248, 253);
-        margin-bottom: 20px;
-        /* height: 800px;; */
-    }
-
-    @media (max-width: 768px) {
-    .onlinehub, .facebook, .twitter {
-        width: 100% !important;
-        margin-left: 0 !important;
-        margin-right: 0;
-    }
-
-    .pnetworks {
-        flex-direction: column;
-        height: auto;
-       
-    }
-}
-
-/* Mobile Styles */
-@media (max-width: 600px) {
-    .onlinehub, .facebook, .twitter {
-        width: 100% !important;
-        margin-left: 0 !important;
-        margin-right: 0;
-        padding: 10px;
-        height: auto;
-    }
-
-    .pnetworks {
-        flex-direction: column;
-        height: auto;
-        align-items: center;
-    }
-}
-
-/* iPhone 13 Pro Max Styles */
-@media (max-width: 430px) {
-    .onlinehub, .facebook, .twitter {
-        width: 100% !important;
-    }
-    .pnetworks {
-        flex-direction: column;
-        height: auto;
-    }
-}
-
-
-
-
-
-.unique-info-section {
-            padding: 20px;
-            background-color: #fff;
-        }
-        .unique-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 20px;
-            position: relative; 
-        }
-        .unique-info-content {
-            text-align: center;
-            margin-bottom: 40px;
-        }
-        .unique-info-content h2 {
-            font-size: 32px;
-            margin-bottom: 20px;
-            color: #972a41;
-        }
-        .unique-info-content p {
-            font-size: 18px;
-            color: #666;
-        }
-        .unique-row {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            position: relative; 
-            margin: -10px;
-        }
-        .unique-col-md-6 {
-            flex: 0 0 100%; 
-            max-width: 100%;
-            padding: 10px;
-            position: relative; 
-        }
-        .unique-card1, .unique-card2, .unique-card3, .unique-card4 {
-            background-color: #f9f9f9; 
-            border: 1px solid #ddd;
-            padding: 20px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-            position: relative;
-            z-index: 1;
-        }
-        .unique-card1 {
-            border-top-left-radius: 45px;
-            border-top-right-radius: 45px;
-        }
-        .unique-card2 {
-            border-top-left-radius: 45px;
-            border-top-right-radius: 45px;
-        }
-        .unique-card3 {
-            border-bottom-left-radius: 45px;
-            border-bottom-right-radius: 45px;
-        }
-        .unique-card4 {
-            border-bottom-left-radius: 45px;
-            border-bottom-right-radius: 45px;
-        }
-        .unique-card1::after, .unique-card2::after, .unique-card3::after, .unique-card4::after {
-            content: '';
-            display: block;
-            width: 100%;
-            height: 4px;
-            position: absolute;
-            left: 0;
-        }
-        .unique-card1::after {
-            background-color: #865da1;
-            bottom: 0;
-            border-radius: 0 0 5px 5px; 
-        }
-        .unique-card2::after {
-            background-color: #ea9123;
-            bottom: 0;
-            border-radius: 0 0 5px 5px; 
-        }
-        .unique-card3::after {
-            background-color: #25b2e8;
-            top: 0; 
-            border-radius: 5px 5px 0 0; 
-        }
-        .unique-card4::after {
-            background-color: #e5481a;
-            top: 0; 
-            border-radius: 5px 5px 0 0; 
-        }
-        
-        .unique-card1 h3 {
-            color: #865da1;
-            text-align: center;
-        }
-        .unique-card2 h3 {
-            color: #ea9123;
-            text-align: center;
-        }
-        .unique-card3 h3 {
-            color: #25b2e8;
-            text-align: center;
-        }
-        .unique-card4 h3 {
-            color: #e5481a;
-            text-align: center;
-        }
-
-        .unique-card1 h4 {
-            color: #865da1;
-        }
-        .unique-card2 h4 {
-            color: #ea9123;
-        }
-        .unique-card3 h4 {
-            color: #25b2e8;
-        }
-        .unique-card4 h4 {
-            color: #e5481a;
-        }
-        
-        .unique-icon-card {
-            background-color: #f9f9f9; 
-            border-radius: 10px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-            position: absolute; 
-            width: 118px; 
-            height: 90px; 
-            top: 50%; 
-            left: 50%; 
-            transform: translate(-50%, -50%);
-            z-index: 2; 
-            text-align: center; 
-        }
-        .unique-icon-card img {
-            position: absolute;
-            width: 54px; 
-            height: 42px; 
-        }
-        .unique-icon-card img:nth-child(1) { 
-            top: 3px;
-            left: 74%;
-            transform: translateX(-50%);
-        }
-        .unique-icon-card img:nth-child(2) { 
-            top: 73%;
-            right: 3px;
-            transform: translateY(-50%);
-        }
-        .unique-icon-card img:nth-child(3) { 
-            bottom: 0px;
-            left: 27%;
-            transform: translateX(-50%);
-        }
-        .unique-icon-card img:nth-child(4) { 
-            top: 28%;
-            left: 2px;
-            transform: translateY(-50%);
-        }
-       
-        @media (min-width: 768px) {
-            .unique-col-md-6 {
-                flex: 0 0 45%;
-                max-width: 45%;
-            }
-        }
-        @media (max-width: 768px) {
-            .unique-icon-card {
-                width: 120px; 
-                height: 120px;
-            }
-            .unique-icon-card img {
-                width: 40px; 
-                height: 40px;
-            }
-        }
-        @media (max-width: 576px) {
-            .unique-icon-card {
-                width: 90px; 
-                height: 90px;
-            }
-            .unique-icon-card img {
-                width: 30px; 
-                height: 30px;
-            }
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Mumbai Local - Empowering self-help groups through initiatives and support.">
+  <meta name="keywords" content="SHG, BMC, Mumbai Local, Empowerment, Community Engagement, Funding, Marketing">
+  <meta name="author" content="Your Name or Organization">
+  <link rel="icon" href="images/Mumbai-Local-favicon.png" type="image/x-icon">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link rel="stylesheet" href="./index.css">
+  <link rel="stylesheet" href="./indexMobile.css">
+  <title>Mumbai Local</title>
+
+  <!-- fa key-->
+  <script src="https://kit.fontawesome.com/b27d57f29f.js" crossorigin="anonymous"></script>
 </head>
-<body>
-<!-- Header Section -->
 
-
-
-
-
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <div class="navbar-brand-wrapper">
+  <!-- navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
       <a class="navbar-brand" href="#">
-        <img src="images/BMC.png" alt="" height="60px" />
+        <img src="http://kitintellect.tech/bmccompetition/MumbaiLocal-BMCLogoo.png_20240806054923" class="firstLogo Mumbai Local"/>
+        <img src="http://kitintellect.tech/bmccompetition/MumbaiLocal-logo.png_20240806054556"  class="secondLogo Mumbai Local" />
       </a>
-      <a class="navbar-brand" href="#">
-        <img src="images/Mumbai Local Header.png" alt="" height="60px" />
-      </a>
-      <button
-        class="navbar-toggler"
-        type="button"
-        data-toggle="collapse"
-        data-target="#navbarSupportedContent"
-        aria-controls="navbarSupportedContent"
-        aria-expanded="false"
-        aria-label="Toggle navigation"
-      >
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-    </div>
-
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav ml-auto">
-        <li class="nav-item active">
-          <a class="nav-link mx-3 nav-link-large" href="#">
-            Home <span class="sr-only">(current)</span>
-          </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link mx-3 nav-link-large" href="#">About Us</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link mx-3 nav-link-large" href="#">Contact Us</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link mx-3 nav-link-large" href="#">Initiatives</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link mx-3 nav-link-large" href="#">Competitions</a>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link mx-3 nav-link-large" href="#">Gallery</a>
+           <!-- <a class="nav-link" href="#">Initiatives</a> -->
           </li>
-         
-      </ul>
+          <li class="nav-item">
+            <a class="nav-link" href="#gallery">Gallery</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./AboutUs.html">About us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#contactus">Contact us</a>
+          </li>
+        </ul>
+      </div>
     </div>
   </nav>
-<!-- <header>
 
-
-
-    
-        
-    <nav>
-        <div class="logo">
-            <div class="logo">
-                <a href=""><img src="images/BMC.png" alt="logo" class="logo-img"></a>
-            </div>  
-            <span class="divider"></span>
-            <div class="logo">
-                <a href=""><img src="images/Mumbai Local Header.png" alt="logo" class="logo-img"></a>
-
-        </div>
+  <!-- image slider -->
+  <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="images/homepageimage1.jpg" class="d-block w-100" alt="homepage1">
+      </div>
+      <div class="carousel-item">
+        <img src="images/homepage2.jpg" class="d-block w-100" alt="homepage2">
+      </div>
+     <!-- <div class="carousel-item">
+        <img src="images/mumbai-local-homepage-slider-3.jpg" class="d-block w-100" alt="homepage3">
+      </div> -->
     </div>
-        <ul id="menuList">
-            <li><a href="">HOME</a></li>
-            <li><a href="AboutUs.html">ABOUT US</a></li>
-            <li><a href="">INITIATIVES</a></li>
-            <li><a href="">GALLERY</a></li>
-            <li><a href="">CONTACT US</a></li>
-        </ul>
-        <div class="menu-icon">
-            <i class="fa-solid fa-bars" onclick="toggleMenu()"></i>
-        </div>
-    </nav>
-   
-</header> -->
-<!-- Horizontal Line Below Navigation Bar -->
-<hr class="nav-hr">
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
 
-<!-- Banner Section -->
-<div class="banner">
-    <img src="images/Mumbai Local-Banner(Logo-color).png" alt="Banner Image">
-</div>
-
-<!-- 4 UPS's Section -->
-<div class="boxes">
+  <!-- icon box section -->
+<div class="boxes mt-3 mb-3">
     <div class="box">
         <img src="images/Empowerment of SHGs Icon.png" alt="Business Selection Icon">
-        <h2>Empowerment Of SHGs</h2>
-        <p>We will help you to select the right business.</p>
+        <h2>Empowerment of SHGs</h2>
+        <p>We are committed to providing you with the tools and resources needed to achieve your goals.</p>
     </div>
     <div class="box">
         <img src="images/Inclusivity for Transgender Icon.png" alt="Funding Icon">
-        <h2>Inclusivity For Transgenders</h2>
-        <p>We will provide funds for your business.</p>
+        <h2>Inclusivity for Transgenders</h2>
+        <p>We are dedicated to creating an environment where everyone feels valued and respected.</p>
     </div>
     <div class="box">
         <img src="images/Promotion of Artisanal Products.png" alt="Marketing Icon">
-        <h2>Promotion Of Products</h2>
-        <p>Training helps to upgrade the business skills.</p>
+        <h2>Promotion of Artisanal Products</h2>
+        <p>We support showcasing your unique creations to a wider audience.</p>
     </div>
-    
-    
-    
     
     <div class="box">
         <img src="images/Community Engagement.png" alt="Branding Icon">
         <h2>Community Engagement</h2>
-        <p>We brand your products to help them stand out in the market.</p>
+        <p>We collaborate with local communities to ensure your initiatives receive the recognition they deserve.</p>
     </div>
     
 </div>
 
-
-
-
-
-
-<!-- Empowerment of SHGs Section -->
-<div class="business-selection">
-    <div class="info-content ">
-        <h2 style="color: white; background-color: #972a41; ;">Empowerment of SHGs</h2>
-        <div class="content-wrapper">
-            <div class="left-content">
-                <p>They also play a great role in empowering women because SHGs help women from economically weaker sections build social capital. Financial independence through self-employment opportunities also helps improve other development factors such as literacy levels, improved healthcare, and better family planning.
-                   
-                </p>
-            </div>
-            <div class="right-content">
-                <!-- Main Card with Sub-cards -->
-                <div class="card">
-                    <h3>Support For Self-Help Groups.</h3>
-                    <p class="card-description">Self-help groups (SHGs) are pivotal in fostering community development and financial independence, especially among women in rural and semi-urban areas. At Mumbai Local, we provide comprehensive support to SHGs to help them thrive and achieve their entrepreneurial goals. Our support includes:</p>
-                    <div class="sub-cards">
-                        <div class="sub-card">
-                            <h5>Business Selection</h5>
-                            <p class="sub-card-description">We assist SHGs in identifying viable business opportunities that align with their skills and market demand. This helps them choose the right business path and ensures long-term sustainability.</p>
-                        </div>
-                        <div class="sub-card">
-                            <h5>Funding Assistance</h5>
-                            <p class="sub-card-description">Access to capital is crucial for any business. We connect SHGs with funding sources, including microfinance institutions, government schemes, and other financial institutions, to secure the necessary funds for their business operations.</p>
-                        </div>
-                        <div class="sub-card">
-                            <h5>Marketing Support</h5>
-                            <p class="sub-card-description">Effective marketing is essential for business success. We offer marketing services that include digital marketing strategies, social media promotions, and participation in local and online marketplaces to increase visibility and reach.</p>
-                        </div>
-                        <div class="sub-card">
-                            <h5>Branding Services</h5>
-                            <p class="sub-card-description">Building a strong brand is vital for differentiating products in the market. We help SHGs develop their brand identity through logo design, packaging, and promotional materials that resonate with their target audience.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="card">
-                    <h3>Access To Financial Resources And Training.</h3>
-                    <p>Access to financial resources and training is crucial for the success and growth of small businesses and self-help groups (SHGs). At Mumbai Local, we provide targeted support to empower entrepreneurs and SHG members with the financial and educational tools they need. Our services include:</p>
-                    
-                    <div class="sub-cards">
-                        <div class="sub-card">
-                            <h5>Financial Resource Access</h5>
-                            <p class="sub-card-description">We connect businesses and SHGs with various funding sources, including government grants, microfinance institutions, and private investors, to secure the capital necessary for starting or expanding their operations.</p>
-                        </div>
-                        <div class="sub-card">
-                            <h5>Training And Capacity Building</h5>
-                            <p class="sub-card-description">We offer training programs on essential business skills, including financial literacy, marketing strategies, operations management, and customer service, to enhance the overall capabilities of entrepreneurs and SHG members.</p>
-                        </div>
-                        <div class="sub-card">
-                            <h5>Networking And Collaboration</h5>
-                            <p class="sub-card-description">We facilitate connections within a network of entrepreneurs, investors, and industry professionals, fostering collaboration and sharing of resources and knowledge.</p>
-                        </div>
-                        <div class="sub-card">
-                            <h5>Resource Centers</h5>
-                            <p class="sub-card-description">We provide access to resource centers where individuals can find information on funding options, financial management tools, and training opportunities</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
+<!--Empowerment of SHGs -->
+<div class="stickyImage">
+  <div class="info-content">
+    <h2>Empowerment of SHGs</h2>
+    <div class="content-wrapper">
+        <div class="left-content">
+            <p>They also play a great role in empowering women because SHGs help women from economically weaker sections build social capital. Financial independence through self-employment opportunities also helps improve other development factors such as literacy levels, improved healthcare, and better family planning.
+                <br><br>
+                The ultimate goal is to identify a business opportunity and create a business model that is financially viable and aligns with the individual's goals and values.
+            </p>
         </div>
     </div>
 </div>
-<script>
-    window.addEventListener('scroll', function() {
-        const businessSelection = document.querySelector('.business-selection');
-        if (window.scrollY > 0) {
-            businessSelection.style.backgroundImage = 'none';
-        } else {
-            businessSelection.style.backgroundImage = 'url(images/image.jpg)'; 
-        }
-    });
-</script>
+
+
+
+<div class="empowerBlock">
+    <div class="subempowerBlock">
+      <div>
+        <h2 class="emptitle">Support for self-help groups.</h2>
+<p class="empdesc">Self-help groups (SHGs) are pivotal in fostering community development and financial independence, especially among women in rural and semi-urban areas. At Mumbai Local, we provide comprehensive support to SHGs to help them thrive and achieve their entrepreneurial goals. Our support includes:</p>
+      </div>
+      <div style="display: inline-flex; width:100% ">
+        <div style="display: grid; width:50%">
+          <div class="sercice-div-mobile-view" style="width: 100%; display: inline-flex; justify-content: center;">
+            <div class="serviceCard">
+              <details class="berry">
+                <summary>
+                  <table style="margin-bottom: 0px !important; padding: 0px !important;" >
+                    <tr>
+                      <td style="padding: 0px !important; display:flex; justify-content:left"><span style="font-weight:600; font-size: 18px; color:#4e0e47;padding-top: 0px !important; ">Business Selection</td>
+                    
+                    </tr>
+                  </table>
+                </summary>
+                <span style="font-size: 14px; font-family:'IBM Plex Sans', sans-serif; line-height: 1.8em; padding: 8px; font-size: 14px; color: #898989	;">We assist SHGs in identifying viable business opportunities that align with their skills and market demand. This helps them choose the right business path and ensures long-term sustainability.</span>
+              </details>
+            </div>
+    </div>
+        </div>
+
+        <div style="display: grid; width:50%">
+          <div class="sercice-div-mobile-view" style="width: 100%; display: inline-flex; justify-content: center;">
+            <div class="serviceCard">
+              <details class="berry">
+                <summary>
+                  <table style="margin-bottom: 0px !important; padding: 0px !important;" >
+                    <tr>
+                      <td style="padding: 0px !important; display:flex; justify-content:left"><span style="font-weight:600; font-size: 18px; color:#4e0e47;padding-top: 0px !important; ">Funding Assistance</span></td>
+                    
+                    </tr>
+                  </table>
+                </summary>
+                <span style="font-size: 14px; font-family:'IBM Plex Sans', sans-serif; line-height: 1.8em; padding: 8px; font-size: 14px; color: #898989	;">Access to capital is crucial for any business. We connect SHGs with funding sources, including microfinance institutions, government schemes, and other financial institutions, to secure the necessary funds for their business operations.</span>
+              </details>
+            </div>
+    </div>
+        </div>
+      </div>
+
+      <div style="display: inline-flex; width:100% ">
+        <div style="display: grid; width:50%">
+          <div class="sercice-div-mobile-view" style="width: 100%; display: inline-flex; justify-content: center;">
+            <div class="serviceCard">
+              <details class="berry">
+                <summary>
+                  <table style="margin-bottom: 0px !important; padding: 0px !important;" >
+                    <tr>
+                      <td style="padding: 0px !important; display:flex; justify-content:left"><span style="font-weight:600; font-size: 18px; color:#4e0e47;padding-top: 0px !important; ">Marketing Support</td>
+                    
+                    </tr>
+                  </table>
+                </summary>
+                <span style="font-size: 14px; font-family:'IBM Plex Sans', sans-serif; line-height: 1.8em; padding: 8px; font-size: 14px; color: #898989	;">Effective marketing is essential for business success. We offer marketing services that include digital marketing strategies, social media promotions, and participation in local and online marketplaces to increase visibility and reach.</span>
+              </details>
+            </div>
+    </div>
+        </div>
+
+        <div style="display: grid; width:50%">
+          <div class="sercice-div-mobile-view" style="width: 100%; display: inline-flex; justify-content: center;">
+            <div class="serviceCard">
+              <details class="berry">
+                <summary>
+                  <table style="margin-bottom: 0px !important; padding: 0px !important;" >
+                    <tr>
+                      <td style="padding: 0px !important; display:flex; justify-content:left"><span style="font-weight:600; font-size: 18px; color:#4e0e47;padding-top: 0px !important; ">Branding Services</span></td>
+                    
+                    </tr>
+                  </table>
+                </summary>
+                <span style="font-size: 14px; font-family:'IBM Plex Sans', sans-serif; line-height: 1.8em; padding: 8px; font-size: 14px; color: #898989	;">Building a strong brand is vital for differentiating products in the market. We help SHGs develop their brand identity through logo design, packaging, and promotional materials that resonate with their target audience.</span>
+              </details>
+            </div>
+    </div>
+        </div>
+      </div>
+        
+    </div>
+
+    <div class="subempowerBlock">
+      <div>
+        <h2 class="emptitle">Support for self-help groups.</h2>
+<p class="empdesc">Self-help groups (SHGs) are pivotal in fostering community development and financial independence, especially among women in rural and semi-urban areas. At Mumbai Local, we provide comprehensive support to SHGs to help them thrive and achieve their entrepreneurial goals. Our support includes:</p>
+      </div>
+
+      <div style="display: inline-flex; width:100% ">
+        <div style="display: grid; width:50%">
+          <div class="sercice-div-mobile-view" style="width: 100%; display: inline-flex; justify-content: center;">
+            <div class="serviceCard">
+              <details class="berry">
+                <summary>
+                  <table style="margin-bottom: 0px !important; padding: 0px !important;" >
+                    <tr>
+                      <td style="padding: 0px !important; display:flex; justify-content:left"><span style="font-weight:600; font-size: 18px; color:#4e0e47;padding-top: 0px !important; ">Financial Resource Access</td>
+                    
+                    </tr>
+                  </table>
+                </summary>
+                <span style="font-size: 14px; font-family:'IBM Plex Sans', sans-serif; line-height: 1.8em; padding: 8px; font-size: 14px; color: #898989	;">We connect businesses and SHGs with various funding sources, including government grants, microfinance institutions, and private investors, to secure the capital necessary for starting or expanding their operations.</span>
+              </details>
+            </div>
+    </div>
+        </div>
+
+        <div style="display: grid; width:50%">
+          <div class="sercice-div-mobile-view" style="width: 100%; display: inline-flex; justify-content: center;">
+            <div class="serviceCard">
+              <details class="berry">
+                <summary>
+                  <table style="margin-bottom: 0px !important; padding: 0px !important;" >
+                    <tr>
+                      <td style="padding: 0px !important; display:flex; justify-content:left"><span style="font-weight:600; font-size: 18px; color:#4e0e47;padding-top: 0px !important; ">Training and Capacity Building</span></td>
+                    
+                    </tr>
+                  </table>
+                </summary>
+                <span style="font-size: 14px; font-family:'IBM Plex Sans', sans-serif; line-height: 1.8em; padding: 8px; font-size: 14px; color: #898989	;">We offer training programs on essential business skills, including financial literacy, marketing strategies, operations management, and customer service, to enhance the overall capabilities of entrepreneurs and SHG members.</span>
+              </details>
+            </div>
+    </div>
+        </div>
+      </div>
+        
+    </div>
+ </div>
+</div>
 
 <!-- Inclusivity for Transgenders -->
-<div class="info-section funding-section">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12">
-                <div class="info-content">
-                    <h2>Inclusivity For Transgenders</h2>
-                    <p>Programs supporting transgender livelihoods are essential for creating equitable opportunities and improving economic outcomes for transgender individuals. At Mumbai Local, we are dedicated to offering comprehensive programs designed to empower transgender individuals and enhance their financial independence.</p>
-                </div>
+
+
+<div class="info-section funding-section inclusivity-container">
+  <div class="container">
+      <div class="row">
+          <div class="col-md-12">
+            <div class="iclusivityBlock mt-5 rainbow-card">
+              <h2 class="mt-1 inclusivityText mb-3">Inclusivity for Transgenders</h2>
             </div>
-        </div>
-        <div class="row mt-4">
-            <div class="col-md-6">
-                <div class="info-content">
-                    <h3>Programs Supporting Transgender Livelihoods.</h3>
-                    <h4 class="text-left"><i class="fas fa-arrow-right"></i> Employment Opportunities</h4>
+              <div class="info-content-inclusivity">
+                  <div class="text-left">Programs supporting transgender livelihoods are essential for creating equitable opportunities and improving economic outcomes for transgender individuals. At Mumbai Local, we are dedicated to offering comprehensive programs designed to empower transgender individuals and enhance their financial independence.</div>
+              </div>
+          </div>
+      </div>
+      <div class="row mt-4">
+          <div class="col-md-6">
+              <div class="info-content-inclusivity">
+                  <h3 class="mt-2 mb-3">Programs supporting transgender livelihoods.</h3>
+                  <div class="inclusivity-block-div">
+                    <h4 class="text-left"> Employment Opportunities</h4>
                     <p class="text-left">Starting a business often requires a significant amount of upfront capital to cover expenses such as purchasing material, machines, and hiring employees.</p>
-                    <h4 class="text-left"><i class="fas fa-arrow-right"></i> Financial Support and Resources</h4>
+                    <h4 class="text-left"> Financial Support and Resources</h4>
                     <p class="text-left">As a business grows, it may need additional funding to finance expansion efforts such as launching a new product, or increasing production.</p>
-                    <h4 class="text-left"><i class="fas fa-arrow-right"></i> Mentorship and Networking</h4>
+                    <h4 class="text-left"> Mentorship and Networking</h4>
                     <p class="text-left">A business may need funding to cover its day-to-day operating costs, such as paying rent, utilities, and salaries.</p>
-                    <h4 class="text-left"><i class="fas fa-arrow-right"></i> Supportive Services</h4>
+                    <h4 class="text-left"> Supportive Services</h4>
                     <p class="text-left">To purchase new technologies or equipment that will help it improve its operations and increase efficiency.</p>
-                </div>
-            </div>
-            <div class="col-md-6">
-                <div class="info-content">
-                    <h3>Social And Economic Integration</h3>
-                    <p>At Mumbai Local, we are dedicated to promoting the social and economic integration of marginalized groups, including transgender individuals, women, and self-help groups (SHGs). Our comprehensive approach aims to create an inclusive environment where everyone can thrive and contribute to their communities.</p>
-                    <img src="images/Social and economic integration.png" alt="Social and economic integration" class="image-info-content" />
-                </div>
-            </div>
-            
-            
-            
-        </div>
-    </div>
+                  </div>
+                  
+              </div>
+          </div>
+          <div class="col-md-6">
+              <div class="info-content-inclusivity">
+
+                  <h3 class="mt-2 mb-3">Social and economic integration</h3>
+                  <div class="inclusivity-block-div">
+                    <div class="text-left">At Mumbai Local, we are dedicated to promoting the social and economic integration of marginalized groups, including transgender individuals, women, and self-help groups (SHGs). Our comprehensive approach aims to create an inclusive environment where everyone can thrive and contribute to their communities.</div>
+                  </div>
+                  <div class="inclusivity-image">
+                    <img src="images/q.jpeg" alt="Social and economic integration" class="image-info-content"  width="90%" style="border-radius: 16px;"/>
+                  </div>
+                  
+              </div>
+          </div>
+      </div>
+  </div>
 </div>
 
-<!-- Promotion of Artisanal Products Section -->
+<!-- Promotion of Products -->
+
 <div class="unique-info-section">
-    <div class="unique-container">
-        <div class="unique-info-content">
-            <h2>Promotion Of Products</h2>
-            <p>At Mumbai Local, we are committed to empowering local artisans by providing them with the tools, resources, and platforms needed to reach broader markets and achieve sustainable success. Our programs for market access are designed to help artisans showcase their unique products, connect with customers, and grow their businesses. These initiatives include:</p>
-        </div>
-        
-        <div class="unique-row">
-            <div class="unique-col-md-6">
-                <div class="unique-card1">
-                    <h3>Marketing</h3>
-                    <h4>Digital Marketing</h4>
-                    <p>Our digital marketing services help artisans promote their products online, utilizing social media, email marketing, and search engine optimization (SEO) to attract a wider audience.</p>
-                </div>
-            </div>
-            <div class="unique-col-md-6">
-                <div class="unique-card2">
-                    <h3>Retail</h3>
-                    <h4>Design and Innovation</h4>
-                    <p>We offer workshops and consultations on product design and innovation, helping artisans refine their offerings to meet market demands.</p>
-                </div>
-            </div>
-            <div class="unique-col-md-6">
-                <div class="unique-card3">
-                    <h3>Market Access Programs</h3>
-                    <h4>Local Markets</h4>
-                    <p>We organize local markets and fairs where artisans can directly sell their products and interact with customers, building a loyal customer base.</p>
-                </div>
-            </div>
-            <div class="unique-col-md-6">
-                <div class="unique-card4">
-                    <h3>Training and Support</h3>
-                    <h4>Workshops</h4>
-                    <p>We conduct workshops on various topics such as business management, marketing strategies, and financial literacy to help artisans run their businesses more efficiently.</p>
-                </div>
-            </div>
-        </div>
-    </div>
+  <div class="unique-container">
+      <div class="unique-info-content">
+          <h2>Promotion Of Products</h2>
+          <p>At Mumbai Local, we are committed to empowering local artisans by providing them with the tools, resources, and platforms needed to reach broader markets and achieve sustainable success. Our programs for market access are designed to help artisans showcase their unique products, connect with customers, and grow their businesses. These initiatives include:</p>
+      </div>
+      
+      <div class="unique-row">
+          <div class="unique-col-md-6">
+              <div class="unique-card1">
+                  <h3>Marketing</h3>
+                  <h4>Digital Marketing</h4>
+                  <p>Our digital marketing services help artisans promote their products online, utilizing social media, email marketing.</p>
+              </div>
+          </div>
+          <div class="unique-col-md-6">
+              <div class="unique-card2">
+                  <h3>Retail</h3>
+                  <h4>Design and Innovation</h4>
+                  <p>We offer workshops and consultations on product design and innovation, helping artisans refine their offerings to meet market demands.</p>
+              </div>
+          </div>
+          <div class="unique-col-md-6">
+              <div class="unique-card3">
+                  <h3>Market Access Programs</h3>
+                  <h4>Local Markets</h4>
+                  <p>We organize local markets and fairs where artisans can directly sell their products and interact with customers, building a loyal customer base.</p>
+              </div>
+          </div>
+          <div class="unique-col-md-6">
+              <div class="unique-card4">
+                  <h3>Training and Support</h3>
+                  <h4>Workshops</h4>
+                  <p>We conduct workshops on various topics such as business management, marketing strategies, and financial literacy .</p>
+              </div>
+          </div>
+      </div>
+  </div>
 </div>
 
-
-
-<!-- Community Engagement -->
-
-
-
-<div class="branding-section">
-    <div class="info-content">
-        <h2>Community Engagement</h2>
-        <p>At Mumbai Local, we believe in the power of community engagement to drive positive change and foster a sense of belonging among all members of society. Active participation in local initiatives is a cornerstone of our community engagement efforts. We encourage and support individuals, especially those from marginalized groups, to get involved in local activities that promote social cohesion, economic development, and cultural enrichment.</p>
-        
-    </div>
-</div>
-
-
-   <!-- To/task -->
+<!-- to do task-->
 <div class="tasks-container">
-    <h2>Do/Task</h2>
-    <p>Explore a diverse range of online and offline skill-building exercises, challenges, and competitions</p>
-    <div class="tasks-grid">
-        <div class="task-item">
-            <img src="images/Best Product Competition for BMC SHGs.png" alt="Best Product Competition for BMC SHGs">
-            <p>Best Product Competition for BMC SHGs</p>
-        </div>
-        <div class="task-item">
-            <img src="images/Women Entrepreneurs Summit.png" alt="Women Entrepreneurs Summit">
-            <p>Women Entrepreneurs Summit</p>
-        </div>
-        <div class="task-item">
-            <img src="images/Transgender Artisans Fair.png" alt="Transgender Artisans Fair">
-            <p>Transgender Artisans Fair</p>
-        </div>
-        <div class="task-item">
-            <img src="images/Sustainable Crafts Exhibition.png" alt="Sustainable Crafts Exhibition">
-            <p>Sustainable Crafts Exhibition</p>
-        </div>
-        <div class="task-item">
-            <img src="images/Rural Innovation Challenge.png" alt="Rural Innovation Challenge">
-            <p>Rural Innovation Challenge</p>
-        </div>
-    </div>
+  <h2 class="inclusivityText">Do / Task</h2>
+  <div class="do-task-title mt-3 mb-3" >Explore a diverse range of online and offline skill-building exercises, challenges, and competitions</div>
+  <div class="tasks-grid">
+    <a href="https://mumbailocal.org/" target="_blank" style="text-decoration: none;">
+      <div class="task-item">
+          <img src="images/Best Product Competition for BMC SHGs.png" alt="Best Product Competition for BMC SHGs">
+          <p>Best Product Competition for BMC SHGs</p>
+      </div>
+    </a>
+      <div class="task-item">
+          <img src="images/Women Entrepreneurs Summit.png" alt="Women Entrepreneurs Summit">
+          <p>Women Entrepreneurs Summit</p>
+      </div>
+      <div class="task-item">
+          <img src="images/Transgender Artisans Fair.png" alt="Transgender Artisans Fair">
+          <p>Transgender Artisans Fair</p>
+      </div>
+      <div class="task-item">
+          <img src="images/Sustainable Crafts Exhibition.png" alt="Sustainable Crafts Exhibition">
+          <p>Sustainable Crafts Exhibition</p>
+      </div>
+      <div class="task-item">
+          <img src="images/Rural Innovation Challenge.png" alt="Rural Innovation Challenge">
+          <p>Rural Innovation Challenge</p>
+      </div>
+  </div>
 </div>
 
-
-<!-- Image Gallery -->
-
-<div class="info-content ">
-    <h2 >Image Gallery</h2>
-<section>
-    <div class="box box-1"></div>
-    <div class="box box-2"></div>
-    <div class="box box-3"></div>
-    <div class="box box-4"></div>
-    <div class="box box-5"></div>
-    <div class="box box-1"></div>
-    <div class="box box-2"></div>
-    <div class="box box-3"></div>
-    <div class="box box-4"></div>
-    <div class="box box-5"></div>
-  </section>
-
+<!-- Image gallery -->
+<div class="image-galleryi" id="gallery">
+  <div class="gallery-containeri">
+      <h2 class="inclusivityText">Image Gallery</h2>
+      <div class="galleryi">
+          <div class="gallery-itemi">
+              <img src="./images/ImageGallery1.jpeg" alt="Image 1">
+          </div>
+          <div class="gallery-itemi">
+              <img src="./images/ImageGallery2.jpeg" alt="Image 2">
+          </div>
+          <div class="gallery-itemi">
+              <img src="./images/ImageGallery3.jpeg" alt="Image 3">
+          </div>
+          <div class="gallery-itemi">
+              <img src="./images/ImageGallery4.jpeg" alt="Image 4">
+          </div>
+          <div class="gallery-itemi">
+              <img src="./images/ImageGallery5.jpeg" alt="Image 5">
+          </div>
+          <div class="gallery-itemi">
+              <img src="./images/ImageGallery6.png" alt="Image 6">
+          </div>
+          <div class="gallery-itemi">
+              <img src="./images/ImageGallery7.jpeg" alt="Image 7">
+          </div>
+          <div class="gallery-itemi">
+              <img src="./images/ImageGallery10.jpeg" alt="Image 8">
+          </div>
+          <div class="gallery-itemi">
+              <img src="./images/ImageGallery11.jpeg" alt="Image 9">
+          </div>
+          <div class="gallery-itemi">
+              <img src="./images/ImageGallery8.jpeg" alt="Image 10">
+          </div>
+          <div class="gallery-itemi">
+              <img src="./images/ImageGallery9.jpeg" alt="Image 11">
+          </div>
+      </div>
+      <button class="prev" onclick="prevSlide()">&#10094;</button>
+      <button class="next" onclick="nextSlide()">&#10095;</button>
+  </div>
+  <div id="myModal" class="modal">
+      <span class="close">&times;</span>
+      <div class="modal-content">
+          <img id="modalImage" src="" alt="Modal Image">
+      </div>
+  </div>
 </div>
-  <!-- html code of video gallery -->
-  <div class="main-container">
-    <h1>Video Gallery</h1>
-    <div class="gallery">
-        <div class="video-card">
-            <iframe src="https://www.youtube.com/embed/_2IN_HjrNPE?si=0t1qojAFwXKrEBZa" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-        </div>
-        <div class="video-card">
-            <iframe src="https://www.youtube.com/embed/EHlXFISQo7E?si=YastkIcNObP1YGme" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-        </div>
-        <div class="video-card">
-            <iframe src="https://www.youtube.com/embed/cyWc5ntCIcU?si=kw9M-RS_q9wQOwOl" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-        </div>
-        <div class="video-card">
-            <iframe src="https://www.youtube.com/embed/s70nDUz31BY?si=A7kuzQnZF9rEO3s-" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-        </div>
-        <div class="video-card">
-            <iframe src="https://www.youtube.com/embed/KUgOYyoGhCU?si=GfnxjBdIbRwnTSxb" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-        </div>
-    </div>
+
+<!-- video gallery -->
+<div class="main-container" id="videogallery">
+  <h1 class="inclusivityText mt-5 pt-3" >Impact Stories</h1>
+  <div class="gallery">
+      <div class="video-card">
+          <iframe src="https://www.youtube.com/embed/_2IN_HjrNPE?si=0t1qojAFwXKrEBZa" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+      </div>
+      <div class="video-card">
+          <iframe src="https://www.youtube.com/embed/EHlXFISQo7E?si=YastkIcNObP1YGme" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      </div>
+      <div class="video-card">
+          <iframe src="https://www.youtube.com/embed/cyWc5ntCIcU?si=kw9M-RS_q9wQOwOl" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+      </div>
+      <div class="video-card">
+          <iframe src="https://www.youtube.com/embed/s70nDUz31BY?si=A7kuzQnZF9rEO3s-" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+      </div>
+      <div class="video-card">
+          <iframe src="https://www.youtube.com/embed/KUgOYyoGhCU?si=GfnxjBdIbRwnTSxb" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+      </div>
+  </div>
 </div>
-<!-- Social Media -->
-<main>
-    <div>
-        <h1>Social Media</h1>
-        
-    </div>
-    <div class="pnetworks">
-        
-    <div class="onlinehub">
-        <blockquote class="instagram-media" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/p/C9wxOGYA4wv/?utm_source=ig_embed&amp;utm_campaign=loading" data-instgrm-version="14" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:540px; min-width:326px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);">
-            <div style="padding:16px;"> <a href="https://www.instagram.com/p/C9wxOGYA4wv/?utm_source=ig_embed&amp;utm_campaign=loading" style=" background:#FFFFFF; line-height:0; padding:0 0; text-align:center; text-decoration:none; width:100%;" target="_blank"> 
-                <div style=" display: flex; flex-direction: row; align-items: center;"> <div style="background-color: #F4F4F4; border-radius: 50%; flex-grow: 0; height: 40px; margin-right: 14px; width: 40px;"></div> 
-                <div style="display: flex; flex-direction: column; flex-grow: 1; justify-content: center;"> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; margin-bottom: 6px; width: 100px;"></div> 
-                <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; width: 60px;"></div></div></div>
-                <div style="padding: 19% 0;"></div> <div style="display:block; height:50px; margin:0 auto 12px; width:50px;"><svg width="50px" height="50px" viewBox="0 0 60 60" version="1.1" xmlns="https://www.w3.org/2000/svg" xmlns:xlink="https://www.w3.org/1999/xlink">
-                    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g transform="translate(-511.000000, -20.000000)" fill="#000000"><g><path d="M556.869,30.41 C554.814,30.41 553.148,32.076 553.148,34.131 C553.148,36.186 554.814,37.852 556.869,37.852 C558.924,37.852 560.59,36.186 560.59,34.131 C560.59,32.076 558.924,30.41 556.869,30.41 M541,60.657 C535.114,60.657 530.342,55.887 530.342,50 C530.342,44.114 535.114,39.342 541,39.342 C546.887,39.342 551.658,44.114 551.658,50 C551.658,55.887 546.887,60.657 541,60.657 M541,33.886 C532.1,33.886 524.886,41.1 524.886,50 C524.886,58.899 532.1,66.113 541,66.113 C549.9,66.113 557.115,58.899 557.115,50 C557.115,41.1 549.9,33.886 541,33.886 M565.378,62.101 C565.244,65.022 564.756,66.606 564.346,67.663 C563.803,69.06 563.154,70.057 562.106,71.106 C561.058,72.155 560.06,72.803 558.662,73.347 C557.607,73.757 556.021,74.244 553.102,74.378 C549.944,74.521 548.997,74.552 541,74.552 C533.003,74.552 532.056,74.521 528.898,74.378 C525.979,74.244 524.393,73.757 523.338,73.347 C521.94,72.803 520.942,72.155 519.894,71.106 C518.846,70.057 518.197,69.06 517.654,67.663 C517.244,66.606 516.755,65.022 516.623,62.101 C516.479,58.943 516.448,57.996 516.448,50 C516.448,42.003 516.479,41.056 516.623,37.899 C516.755,34.978 517.244,33.391 517.654,32.338 C518.197,30.938 518.846,29.942 519.894,28.894 C520.942,27.846 521.94,27.196 523.338,26.654 C524.393,26.244 525.979,25.756 528.898,25.623 C532.057,25.479 533.004,25.448 541,25.448 C548.997,25.448 549.943,25.479 553.102,25.623 C556.021,25.756 557.607,26.244 558.662,26.654 C560.06,27.196 561.058,27.846 562.106,28.894 C563.154,29.942 563.803,30.938 564.346,32.338 C564.756,33.391 565.244,34.978 565.378,37.899 C565.522,41.056 565.552,42.003 565.552,50 C565.552,57.996 565.522,58.943 565.378,62.101 M570.82,37.631 C570.674,34.438 570.167,32.258 569.425,30.349 C568.659,28.377 567.633,26.702 565.965,25.035 C564.297,23.368 562.623,22.342 560.652,21.575 C558.743,20.834 556.562,20.326 553.369,20.18 C550.169,20.033 549.148,20 541,20 C532.853,20 531.831,20.033 528.631,20.18 C525.438,20.326 523.257,20.834 521.349,21.575 C519.376,22.342 517.703,23.368 516.035,25.035 C514.368,26.702 513.342,28.377 512.574,30.349 C511.834,32.258 511.326,34.438 511.181,37.631 C511.035,40.831 511,41.851 511,50 C511,58.147 511.035,59.17 511.181,62.369 C511.326,65.562 511.834,67.743 512.574,69.651 C513.342,71.625 514.368,73.296 516.035,74.965 C517.703,76.634 519.376,77.658 521.349,78.425 C523.257,79.167 525.438,79.673 528.631,79.82 C531.831,79.965 532.853,80.001 541,80.001 C549.148,80.001 550.169,79.965 553.369,79.82 C556.562,79.673 558.743,79.167 560.652,78.425 C562.623,77.658 564.297,76.634 565.965,74.965 C567.633,73.296 568.659,71.625 569.425,69.651 C570.167,67.743 570.674,65.562 570.82,62.369 C570.966,59.17 571,58.147 571,50 C571,41.851 570.966,40.831 570.82,37.631"></path></g></g></g></svg></div><div style="padding-top: 8px;"> <div style=" color:#3897f0; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:550; line-height:18px;">View this post on Instagram</div></div><div style="padding: 12.5% 0;"></div> <div style="display: flex; flex-direction: row; margin-bottom: 14px; align-items: center;"><div> <div style="background-color: #F4F4F4; border-radius: 50%; height: 12.5px; width: 12.5px; transform: translateX(0px) translateY(7px);"></div> <div style="background-color: #F4F4F4; height: 12.5px; transform: rotate(-45deg) translateX(3px) translateY(1px); width: 12.5px; flex-grow: 0; margin-right: 14px; margin-left: 2px;"></div> <div style="background-color: #F4F4F4; border-radius: 50%; height: 12.5px; width: 12.5px; transform: translateX(9px) translateY(-18px);"></div></div><div style="margin-left: 8px;"> <div style=" background-color: #F4F4F4; border-radius: 50%; flex-grow: 0; height: 20px; width: 20px;"></div> <div style=" width: 0; height: 0; border-top: 2px solid transparent; border-left: 6px solid #f4f4f4; border-bottom: 2px solid transparent; transform: translateX(16px) translateY(-4px) rotate(30deg)"></div></div><div style="margin-left: auto;"> <div style=" width: 0px; border-top: 8px solid #F4F4F4; border-right: 8px solid transparent; transform: translateY(16px);"></div> <div style=" background-color: #F4F4F4; flex-grow: 0; height: 12px; width: 16px; transform: translateY(-4px);"></div> <div style=" width: 0; height: 0; border-top: 8px solid #F4F4F4; border-left: 8px solid transparent; transform: translateY(-4px) translateX(8px);"></div></div></div> <div style="display: flex; flex-direction: column; flex-grow: 1; justify-content: center; margin-bottom: 24px;"> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; margin-bottom: 6px; width: 224px;"></div> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; width: 144px;"></div></div></a><p style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;"><a href="https://www.instagram.com/p/C9wxOGYA4wv/?utm_source=ig_embed&amp;utm_campaign=loading" style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none;" target="_blank">A post shared by SHG E-Shop (@shg_e_shop)</a></p></div></blockquote>
-                 <script async src="//www.instagram.com/embed.js"></script>
-    </div>
-    <div class="facebook">
-        <iframe  src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fpermalink.php%3Fstory_fbid%3Dpfbid0mWUL28ioXuJDQ9FkpFjYC5eFfG2pp8n3hfot9xQa4DjJ7y2xs8m9S2ZNKfYgp21ul%26id%3D100093491118987&show_text=true&width=500" width="500" height="660" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>   
-    </div>
-    <div class="twitter">
-        <blockquote class="twitter-tweet"><p lang="en" dir="ltr">🛒Very proud and happy to announce that the products made by women Self Help Groups formed by BMC are now available on <a href="https://t.co/GOkGtUfqLY">https://t.co/GOkGtUfqLY</a><br><br>👭 Everyday adding new products and more and more women are earning their livelihood with pride and dignity. <br><br>Shop for yourselves and…</p>&mdash; माझी Mumbai, आपली BMC (@mybmc) <a href="https://twitter.com/mybmc/status/1804441838461604125?ref_src=twsrc%5Etfw">June 22, 2024</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-    </div>
-  </div>          
- </main>
 
+<!-- social media -->
+<div>
+  <h1 class="inclusivityText mt-5 pt-3">Social Media</h1>
+</div>
+<div class="pnetworks">
+<div class="onlinehub">
+  <blockquote class="instagram-media" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/p/C9wxOGYA4wv/?utm_source=ig_embed&amp;utm_campaign=loading" data-instgrm-version="14" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:540px; min-width:326px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);">
+      <div style="padding:16px;"> <a href="https://www.instagram.com/p/C9wxOGYA4wv/?utm_source=ig_embed&amp;utm_campaign=loading" style=" background:#FFFFFF; line-height:0; padding:0 0; text-align:center; text-decoration:none; width:100%;" target="_blank">
+          <div style=" display: flex; flex-direction: row; align-items: center;"> <div style="background-color: #F4F4F4; border-radius: 50%; flex-grow: 0; height: 40px; margin-right: 14px; width: 40px;"></div>
+          <div style="display: flex; flex-direction: column; flex-grow: 1; justify-content: center;"> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; margin-bottom: 6px; width: 100px;"></div>
+          <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; width: 60px;"></div></div></div>
+          <div style="padding: 19% 0;"></div> <div style="display:block; height:50px; margin:0 auto 12px; width:50px;"><svg width="50px" height="50px" viewBox="0 0 60 60" version="1.1" xmlns="https://www.w3.org/2000/svg" xmlns:xlink="https://www.w3.org/1999/xlink">
+              <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g transform="translate(-511.000000, -20.000000)" fill="#000000"><g><path d="M556.869,30.41 C554.814,30.41 553.148,32.076 553.148,34.131 C553.148,36.186 554.814,37.852 556.869,37.852 C558.924,37.852 560.59,36.186 560.59,34.131 C560.59,32.076 558.924,30.41 556.869,30.41 M541,60.657 C535.114,60.657 530.342,55.887 530.342,50 C530.342,44.114 535.114,39.342 541,39.342 C546.887,39.342 551.658,44.114 551.658,50 C551.658,55.887 546.887,60.657 541,60.657 M541,33.886 C532.1,33.886 524.886,41.1 524.886,50 C524.886,58.899 532.1,66.113 541,66.113 C549.9,66.113 557.115,58.899 557.115,50 C557.115,41.1 549.9,33.886 541,33.886 M565.378,62.101 C565.244,65.022 564.756,66.606 564.346,67.663 C563.803,69.06 563.154,70.057 562.106,71.106 C561.058,72.155 560.06,72.803 558.662,73.347 C557.607,73.757 556.021,74.244 553.102,74.378 C549.944,74.521 548.997,74.552 541,74.552 C533.003,74.552 532.056,74.521 528.898,74.378 C525.979,74.244 524.393,73.757 523.338,73.347 C521.94,72.803 520.942,72.155 519.894,71.106 C518.846,70.057 518.197,69.06 517.654,67.663 C517.244,66.606 516.755,65.022 516.623,62.101 C516.479,58.943 516.448,57.996 516.448,50 C516.448,42.003 516.479,41.056 516.623,37.899 C516.755,34.978 517.244,33.391 517.654,32.338 C518.197,30.938 518.846,29.942 519.894,28.894 C520.942,27.846 521.94,27.196 523.338,26.654 C524.393,26.244 525.979,25.756 528.898,25.623 C532.057,25.479 533.004,25.448 541,25.448 C548.997,25.448 549.943,25.479 553.102,25.623 C556.021,25.756 557.607,26.244 558.662,26.654 C560.06,27.196 561.058,27.846 562.106,28.894 C563.154,29.942 563.803,30.938 564.346,32.338 C564.756,33.391 565.244,34.978 565.378,37.899 C565.522,41.056 565.552,42.003 565.552,50 C565.552,57.996 565.522,58.943 565.378,62.101 M570.82,37.631 C570.674,34.438 570.167,32.258 569.425,30.349 C568.659,28.377 567.633,26.702 565.965,25.035 C564.297,23.368 562.623,22.342 560.652,21.575 C558.743,20.834 556.562,20.326 553.369,20.18 C550.169,20.033 549.148,20 541,20 C532.853,20 531.831,20.033 528.631,20.18 C525.438,20.326 523.257,20.834 521.349,21.575 C519.376,22.342 517.703,23.368 516.035,25.035 C514.368,26.702 513.342,28.377 512.574,30.349 C511.834,32.258 511.326,34.438 511.181,37.631 C511.035,40.831 511,41.851 511,50 C511,58.147 511.035,59.17 511.181,62.369 C511.326,65.562 511.834,67.743 512.574,69.651 C513.342,71.625 514.368,73.296 516.035,74.965 C517.703,76.634 519.376,77.658 521.349,78.425 C523.257,79.167 525.438,79.673 528.631,79.82 C531.831,79.965 532.853,80.001 541,80.001 C549.148,80.001 550.169,79.965 553.369,79.82 C556.562,79.673 558.743,79.167 560.652,78.425 C562.623,77.658 564.297,76.634 565.965,74.965 C567.633,73.296 568.659,71.625 569.425,69.651 C570.167,67.743 570.674,65.562 570.82,62.369 C570.966,59.17 571,58.147 571,50 C571,41.851 570.966,40.831 570.82,37.631"></path></g></g></g></svg></div><div style="padding-top: 8px;"> <div style=" color:#3897f0; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:550; line-height:18px;">View this post on Instagram</div></div><div style="padding: 12.5% 0;"></div> <div style="display: flex; flex-direction: row; margin-bottom: 14px; align-items: center;"><div> <div style="background-color: #F4F4F4; border-radius: 50%; height: 12.5px; width: 12.5px; transform: translateX(0px) translateY(7px);"></div> <div style="background-color: #F4F4F4; height: 12.5px; transform: rotate(-45deg) translateX(3px) translateY(1px); width: 12.5px; flex-grow: 0; margin-right: 14px; margin-left: 2px;"></div> <div style="background-color: #F4F4F4; border-radius: 50%; height: 12.5px; width: 12.5px; transform: translateX(9px) translateY(-18px);"></div></div><div style="margin-left: 8px;"> <div style=" background-color: #F4F4F4; border-radius: 50%; flex-grow: 0; height: 20px; width: 20px;"></div> <div style=" width: 0; height: 0; border-top: 2px solid transparent; border-left: 6px solid #F4F4F4; border-bottom: 2px solid transparent; transform: translateX(16px) translateY(-4px) rotate(30deg)"></div></div><div style="margin-left: auto;"> <div style=" width: 0px; border-top: 8px solid #F4F4F4; border-right: 8px solid transparent; transform: translateY(16px);"></div> <div style=" background-color: #F4F4F4; flex-grow: 0; height: 12px; width: 16px; transform: translateY(-4px);"></div> <div style=" width: 0; height: 0; border-top: 8px solid #F4F4F4; border-left: 8px solid transparent; transform: translateY(-4px) translateX(8px);"></div></div></div> <div style="display: flex; flex-direction: column; flex-grow: 1; justify-content: center; margin-bottom: 24px;"> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; margin-bottom: 6px; width: 224px;"></div> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; width: 144px;"></div></div></a><p style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;"><a href="https://www.instagram.com/p/C9wxOGYA4wv/?utm_source=ig_embed&amp;utm_campaign=loading" style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none;" target="_blank">A post shared by SHG E-Shop (@shg_e_shop)</a></p></div></blockquote>
+           <script async src="//www.instagram.com/embed.js"></script>
+</div>
+<div class="facebook">
+  <iframe  src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fpermalink.php%3Fstory_fbid%3Dpfbid0mWUL28ioXuJDQ9FkpFjYC5eFfG2pp8n3hfot9xQa4DjJ7y2xs8m9S2ZNKfYgp21ul%26id%3D100093491118987&show_text=true&width=500" width="500" height="660" style="border:none;overflow:hidden;background:white" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+</div>
+<div class="twitter">
+  <blockquote class="twitter-tweet"><p lang="en" dir="ltr">:shopping_trolley:Very proud and happy to announce that the products made by women Self Help Groups formed by BMC are now available on <a href="https://t.co/GOkGtUfqLY">https://t.co/GOkGtUfqLY</a><br><br>:two_women_holding_hands: Everyday adding new products and more and more women are earning their livelihood with pride and dignity. <br><br>Shop for yourselves and…</p>&mdash; माझी Mumbai, आपली BMC (@mybmc) <a href="https://twitter.com/mybmc/status/1804441838461604125?ref_src=twsrc%5Etfw">June 22, 2024</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+</div>
+</div>
 
-
-
-
-
-
-<!-- Contact Us Section -->
-
- <div class="contact-us">
-     <h1 class="main-heading">Contact Us</h1>
-        <div class="contact-card intro-card">
-            <p class="intro-text">Thank you for visiting our website Mumbai Local! We value your feedback and questions. Please click the button below to leave us a message. We're here to help and look forward to hearing from you.</p>
-        </div>
-        <div class="contact-section">
-            <div class="contact-card">
-                <h2><i class="fas fa-phone"></i> Have a question or need assistance?</h2>
-                <p>Call Us: +91 84597259</p>
-                <a href="https://wa.me/9184597259" class="whatsapp-button" target="_blank">
-                    <div class="card-icon">
-                        <i class="fab fa-whatsapp"></i>
-                    </div>
-                    <span>Send Message</span>
-                </a>
-            </div>
-            <div class="contact-card">
-                <h2><i class="fas fa-envelope"></i> Need help or have inquiries?</h2>
-                <p>Email: <a href="mailto:support@mumbailocal.org" style="color: #2d2b2b;">support@mumbailocal.org</a></p>
-            </div>
-            <div class="contact-card">
-                <h2><i class="fas fa-map-marker-alt"></i> Office Address/Postal Address</h2>
-                <p>5, Mahapalika Marg, Dhobi Talao, Chhatrapati Shivaji Terminus Area, Fort Mumbai, Maharashtra 400001</p>
-            </div>
-        </div>
-    </div>
-
-
-
-
-<footer class="footer ">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-4 footer-column">
-                <img src="images/Find Us.png" alt="Find Us" class="find-us-image">
-                <div>
-                    <h5>Find Us</h5>
-                    <div class="footer-text">
-                        <p>5, Mahapalika Maag, Dhobi Talao, Chhatrapati Shivaji Terminus Area, Fort, Mumbai, Maharashtra 40001</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4 footer-column">
-                <img src="images/Contact Us.png" alt="Call Us" class="call-us-image">
-                <div>
-                    <h5>Call Us</h5>
-                    <div class="footer-text">
-                        <p>+91 8459172859</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4 footer-column">
-                <img src="images/Mail Us.png" alt="Mail Us" class="mail-us-image">
-                <div>
-                    <h5>Mail Us</h5>
-                    <div class="footer-text">
-                        <p>support@mumbailocal.com</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="row additional-section">
-            <div class="col-md-6 mobile-view">
+<!-- contact us section-->
+<div class="contact-us" id="contactus">
+  <h1 class="inclusivityText" >Contact Us</h1>
+     <div class="contact-card intro-card">
+         <p class="text-left" style="text-align: center;">Thank you for visiting our website Mumbai Local! We value your feedback and questions. Please click the button below to leave us a message. We're here to help and look forward to hearing from you.</p>
+<div style="display: flex; justify-content:center;width: 100%;">
+  <a href="https://wa.me/9184597259" class="whatsapp-button" target="_blank">
                 
-                <p>Join the SHGeshop Competition with BMC's Mumbai Local and support Local Self-Help Groups (SHGs) as they showcase their best products. Submit creations, vote, and recognition, and discover unique, high-quality products. Empower local entrepreneurs today!</p>
-            </div>
-        </div>
-        <div class="row additional-section">
-            <div class="col-md-6">
-                <h5>Follow Us</h5>
-                <div class="social-icons">
-                    <img src="images/twitter.png" alt="Twitter">
-                    <img src="images/facebook.png" alt="Facebook">
-                    <img src="images/insta12.png" alt="Instagram" class="instagram-icon">
-                    <img src="images/link1.png" alt="LinkedIn">
-                </div>
-            </div>
-            <div class="col-md-6 d-flex justify-content-end align-items-center">
-                <img src="images/footer-image.png" alt="Supporting Local SHGs" class="footer-image-support">
-            </div>
-        </div>
-    </div>
+    <svg xmlns="http://www.w3.org/2000/svg" fill="white" height="26px" viewBox="0 0 512 512"><path d="M164.9 24.6c-7.7-18.6-28-28.5-47.4-23.2l-88 24C12.1 30.2 0 46 0 64C0 311.4 200.6 512 448 512c18 0 33.8-12.1 38.6-29.5l24-88c5.3-19.4-4.6-39.7-23.2-47.4l-96-40c-16.3-6.8-35.2-2.1-46.3 11.6L304.7 368C234.3 334.7 177.3 277.7 144 207.3L193.3 167c13.7-11.2 18.4-30 11.6-46.3l-40-96z"/></svg>
+
+   <span>Send Message</span>
+</a>
+</div>
+         
+     </div>
+     <div class="contact-section">
+         <div class="contact-card">
+             <h2><svg xmlns="http://www.w3.org/2000/svg" fill="darkred" height="30px" viewBox="0 0 512 512"><path d="M164.9 24.6c-7.7-18.6-28-28.5-47.4-23.2l-88 24C12.1 30.2 0 46 0 64C0 311.4 200.6 512 448 512c18 0 33.8-12.1 38.6-29.5l24-88c5.3-19.4-4.6-39.7-23.2-47.4l-96-40c-16.3-6.8-35.2-2.1-46.3 11.6L304.7 368C234.3 334.7 177.3 277.7 144 207.3L193.3 167c13.7-11.2 18.4-30 11.6-46.3l-40-96z"/></svg> Have a question or need assistance?</h2>
+             <p>Call Us: +91 84597259</p>
+             
+         </div>
+         <div class="contact-card">
+             <h2><svg xmlns="http://www.w3.org/2000/svg" fill="darkred" height="30px"viewBox="0 0 512 512"><path d="M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4L236.8 313.6c11.4 8.5 27 8.5 38.4 0L492.8 150.4c12.1-9.1 19.2-23.3 19.2-38.4c0-26.5-21.5-48-48-48L48 64zM0 176L0 384c0 35.3 28.7 64 64 64l384 0c35.3 0 64-28.7 64-64l0-208L294.4 339.2c-22.8 17.1-54 17.1-76.8 0L0 176z"/></svg> Need help or have inquiries?</h2>
+             <p>Email: <a href="mailto:support@mumbailocal.org" style="color: #2D2B2B;">support@mumbailocal.org</a></p>
+         </div>
+         <div class="contact-card">
+             <h2><svg xmlns="http://www.w3.org/2000/svg" fill="darkred" height="30px" viewBox="0 0 384 512">><path d="M215.7 499.2C267 435 384 279.4 384 192C384 86 298 0 192 0S0 86 0 192c0 87.4 117 243 168.3 307.2c12.3 15.3 35.1 15.3 47.4 0zM192 128a64 64 0 1 1 0 128 64 64 0 1 1 0-128z"/></svg> Office Address/Postal Address</h2>
+             <p>5, Mahapalika Marg, Dhobi Talao, Chhatrapati Shivaji Terminus Area, Fort Mumbai, Maharashtra 400001</p>
+         </div>
+     </div>
+ </div>
+
+<!-- Footer section -->
+<footer class="footer">
+  <div class="container">
+      <div class="row">
+          <div class="col-md-4 footer-column">
+              <img src="https://kitintellect.tech/bmccompetition/MumbaiLocal-Findus.png_20240806073716" alt="Find Us Mumbai Local" class="find-us-image">
+              <div>
+                  <h5 style="font-weight: 700 ;">Find Us</h5>
+                  <div class="footer-text">
+                      <p>5, Mahapalika Maag, Dhobi Talao, Chhatrapati Shivaji Terminus Area, Fort, Mumbai, Maharashtra 40001</p>
+                  </div>
+              </div>
+          </div>
+          <div class="col-md-4 footer-column">
+              <img src="https://kitintellect.tech/bmccompetition/MumbaiLocal-Callus.png_20240806073626" alt="Call Us Mumbai Local" class="call-us-image">
+              <div>
+                  <h5 style="font-weight: 700 ;">Call Us</h5>
+                  <div class="footer-text">
+                      <p>+91 8459172859</p>
+                  </div>
+              </div>
+          </div>
+          <div class="col-md-4 footer-column">
+              <img src="https://kitintellect.tech/bmccompetition/MumbaiLocal-Mailus.png_20240806073838" alt="Mail Us Mumbai Local" class="mail-us-image">
+              <div>
+                  <h5 style="font-weight: 700 ;">Mail Us</h5>
+                  <div class="footer-text">
+                      <p>support@mumbailocal.org</p>
+                  </div>
+              </div>
+          </div>
+      </div>
+      <div class="row additional-section">
+          <div class="col-md-6 mobile-view">
+              <p>Join the SHGeshop Competition with BMC's Mumbai Local and support Local Self-Help Groups (SHGs) as they showcase their best products. Submit creations, vote, and recognition, and discover unique, high-quality products. Empower local entrepreneurs today!</p>
+          </div>
+      </div>
+      <div class="row additional-section">
+          <div class="col-md-6">
+              <h5 style="font-weight: 700 ;">Follow Us</h5>
+              <div class="social-icons">
+                  <img src="images/twitter.png" alt="Twitter Mumbai Local">
+                 <a href="https://www.facebook.com/people/Mumbai-Local/pfbid031eKEBTNfvxSdAZ2aR7jdbMAXfwFWMWmzZDQZ8kvPK5sUtX41NryL569s3pKXpEcPl/" target="_blank"> <img src="images/facebook.png" alt="Facebook Mumbai Local"></a>
+                 <a href="https://www.instagram.com/the.mumbai.local/" target="_blank" > <img src="images/insta12.png" alt="Instagram Mumbai Local" class="instagram-icon"></a>
+                  <img src="images/link1.png" alt="LinkedIn Mumbai Local">
+              </div>
+          </div>
+          <div class="col-md-6 d-flex justify-content-end align-items-center">
+              <img src="https://kitintellect.tech/bmccompetition/MumbaiLocal-SHG.png_20240806073908" alt="Supporting Local SHGs Mumbai Local" class="footer-image-support">
+          </div>
+      </div>
+  </div>
 </footer>
 <div class="container-fluid">
-    <div class="row">
-        <div class="col-12 copyright">
-            <p>Copyright &copy; 2024 Mumbai Local</p>
-        </div>
-    </div>
+  <div class="row">
+      <div class="col-12 copyright">
+          <p>Copyright &copy; 2024 Mumbai Local</p>
+      </div>
+  </div>
 </div>
-<script
-src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-crossorigin="anonymous"
-></script>
-<script
-src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
-integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-crossorigin="anonymous"
-></script>
-<script
-src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
-integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-crossorigin="anonymous"
-></script>
-<script src="https://kit.fontawesome.com/a076d05399.js"></script>
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+<!-- Image gallery script-->
+
+<script>
+  const gallery = document.querySelector('.galleryi');
+  const items = document.querySelectorAll('.gallery-itemi');
+  let currentIndex = 0;
+  let visibleCount = 1;
+  const totalItems = items.length;
+
+  function updateVisibleCount() {
+      const screenWidth = window.innerWidth;
+      if (screenWidth >= 1200) {
+          visibleCount = 4;
+      } else if (screenWidth >= 900) {
+          visibleCount = 3;
+      } else if (screenWidth >= 600) {
+          visibleCount = 2;
+      } else {
+          visibleCount = 1;
+      }
+  }
+
+  function updateGallery() {
+      const offset = -currentIndex * (gallery.clientWidth / visibleCount);
+      gallery.style.transform = `translateX(${offset}px)`;
+  }
+
+  function nextSlide() {
+      if (currentIndex < totalItems - visibleCount) {
+          currentIndex++;
+      } else {
+          currentIndex = 0;
+      }
+      updateGallery();
+  }
+
+  function prevSlide() {
+      if (currentIndex > 0) {
+          currentIndex--;
+      } else {
+          currentIndex = totalItems - visibleCount;
+      }
+      updateGallery();
+  }
+
+  window.addEventListener('resize', () => {
+      updateVisibleCount();
+      updateGallery();
+  });
+
+  setInterval(nextSlide, 3000);
+
+  const modal = document.getElementById("myModal");
+  const modalImg = document.getElementById("modalImage");
+  const galleryItems = document.getElementsByClassName("gallery-itemi");
+
+  for (let i = 0; i < galleryItems.length; i++) {
+      galleryItems[i].onclick = function() {
+          modal.style.display = "flex";
+          modalImg.src = this.getElementsByTagName("img")[0].src;
+      }
+  }
+
+  const span = document.getElementsByClassName("close")[0];
+  span.onclick = function() {
+      modal.style.display = "none";
+  }
+
+  updateVisibleCount();
+  updateGallery();
+</script>
+
+<!-- bootstrap script -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
 </body>
 </html>

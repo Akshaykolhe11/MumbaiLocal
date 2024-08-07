@@ -209,3 +209,30 @@
         height: 30px;
     }
 }
+
+
+/* image gallery */
+
+@media (min-width: 600px) {
+    .image-galleryi .gallery-itemi {
+        flex: 0 0 48%;
+        max-width: 48%;
+        margin-right: 2%;
+    }
+}
+
+@media (min-width: 900px) {
+    .image-galleryi .gallery-itemi {
+        flex: 0 0 30%;
+        max-width: 30%;
+        margin-right: 2%;
+    }
+}
+
+@media (min-width: 1200px) {
+    .image-galleryi .gallery-itemi {
+        flex: 0 0 250px;
+        height: 250px;
+        margin-right: 20px;
+    }
+}

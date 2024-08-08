@@ -121,6 +121,14 @@
     .info-section .col-md-6 {
         margin-bottom: 20px;
     }
+    .blog-item {
+        width: calc(50% - 20px);
+        margin-right: 20px;
+    }
+
+    .blog-item img {
+        width: 100%;
+    }
 }
 .whatsapp-button span {
     flex: 1;
@@ -180,6 +188,14 @@
     .contact-icon {
         width: 30px;
         height: 30px;
+    }
+    .blog-item {
+        width: 100%;
+        margin-right: 0;
+    }
+
+    .prev, .next {
+        padding: 10px;
     }
 }
 
